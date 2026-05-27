@@ -1,0 +1,6 @@
+{
+  "name": "O Código Energético da Cura",
+  "description": "Uma experiência digital premium, integrando links da bio, landing page de vendas e mini site de autoridade para o livro O Código Energético da Cura.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

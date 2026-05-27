@@ -1,0 +1,113 @@
+import { motion } from "motion/react";
+import { Key, Compass, Award, Brain, Sparkles, Heart, Activity } from "lucide-react";
+
+export default function WhyRead() {
+  const benefits = [
+    {
+      icon: Compass,
+      title: "Expansão da Consciência",
+      desc: "Questione as limitações do ego e visualize novas dimensões de percepção onde você é o co-criador consciente do seu bem-estar diário.",
+    },
+    {
+      icon: Key,
+      title: "Desbloqueio Emocional",
+      desc: "Dissolva os bloqueios psicossomáticos invisíveis acumulados em seu sistema biológico que provocam dores, indisposição crônica ou cansaço.",
+    },
+    {
+      icon: Activity,
+      title: "Equilíbrio Energético",
+      desc: "Alinhe sua malha magnética através de protocolos práticos de hertz e do uso equilibrado da mesa radiestésica em casa ou profissionalmente.",
+    },
+    {
+      icon: Brain,
+      title: "Clareza Mental Superior",
+      desc: "Reduza os picos de estresse, melhore a qualidade de repouso e alcance foco estável acalmando frequências cerebrais de Beta para Alfa.",
+    },
+    {
+      icon: Sparkles,
+      title: "Desenvolvimento Espiritual",
+      desc: "Integre preceitos de ciências físicas fundamentadas com a elevação espiritual lúcida, sem dogmas pesados, com leveza transcendental.",
+    },
+    {
+      icon: Heart,
+      title: "Conexão Interior Primal",
+      desc: "Estruture o canal de intuição inata do seu coração para obter sabedoria instantânea em momentos críticos de tomadas de decisões difíceis.",
+    },
+  ];
+
+  return (
+    <section
+      id="por-que-ler"
+      className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden bg-gradient-to-b from-[#030303]/60 to-[#0c091b]/80"
+    >
+      {/* Background glow orb */}
+      <div className="absolute right-0 top-1/4 w-[35vw] h-[35vw] rounded-full bg-gold-400/[0.03] blur-[100px] pointer-events-none" />
+      <div className="absolute left-0 bottom-1/4 w-[35vw] h-[35vw] rounded-full bg-violet-600/[0.03] blur-[100px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        
+        {/* Section Title */}
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-16">
+          <div className="flex items-center justify-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+            <span className="text-[10px] sm:text-xs font-mono tracking-[0.3em] text-gold-400 uppercase font-semibold">
+              MUDANÇA VIBRACIONAL
+            </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+          </div>
+          
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide text-white leading-tight">
+            Quais Portais se Abrirão Para Você?
+          </h2>
+          
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
+            Não se trata de uma leitura teórica e estática. Cada capítulo foi desenhado como um portal iniciático para decodificar e reconfigurar as frequências da sua mente e do seu tônus vital.
+          </p>
+        </div>
+
+        {/* Bento/Grid style for glassmorphic cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {benefits.map((benefit, idx) => {
+            const Icon = benefit.icon;
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="glass-panel p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative"
+              >
+                {/* Dynamic glossy light reflex inside the card */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gold-400/5 rounded-full blur-2xl group-hover:bg-gold-400/10 transition-colors" />
+
+                <div className="space-y-6">
+                  {/* Icon wrapper */}
+                  <div className="relative w-12 h-12 rounded-xl flex items-center justify-center bg-gold-500/10 border border-gold-500/25 text-gold-300 group-hover:text-gold-200 group-hover:scale-110 transition-all duration-300">
+                    <Icon className="w-5 h-5" />
+                    <div className="absolute inset-0 rounded-xl bg-gold-400/5 animate-pulse" />
+                  </div>
+
+                  <div className="space-y-3">
+                    <h3 className="font-display text-lg text-white font-medium tracking-wide group-hover:text-gold-300 transition-colors">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-xs text-stone-400 leading-relaxed font-light tracking-wide">
+                      {benefit.desc}
+                    </p>
+                  </div>
+                </div>
+
+
+              </motion.div>
+            );
+          })}
+        </div>
+
+
+
+      </div>
+    </section>
+  );
+}
