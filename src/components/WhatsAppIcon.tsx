@@ -1,15 +1,16 @@
 interface WhatsAppIconProps {
   size?: number;
   className?: string;
+  fill?: string;
 }
 
-export default function WhatsAppIcon({ size = 16, className = "" }: WhatsAppIconProps) {
+export default function WhatsAppIcon({ size = 16, className = "", fill = "#25D366" }: WhatsAppIconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
       width={size}
       height={size}
-      fill="#25D366"
+      fill={fill}
       className={className}
       aria-hidden="true"
     >

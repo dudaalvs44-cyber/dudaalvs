@@ -13,12 +13,12 @@ export default function CheckoutSection() {
   const activeTier = {
     id: "combo",
     title: "Edição Suprema",
-    subtitle: "Livro Físico Premium Autografado",
+    subtitle: "Livro Físico Premium",
     price: "53,00",
     desc: "Uma experiência exclusiva para quem deseja aprofundar os ensinamentos de O Código Energético da Cura, com bônus exclusivo após a compra.",
     features: [
       "Edição física especial de lançamento",
-      "Bônus exclusivo de compra",
+      "Bônus exclusivo após compra",
       "Envio seguro com código de rastreamento"
     ],
     badge: "Mais Procurado • Lançamento",
@@ -92,54 +92,61 @@ export default function CheckoutSection() {
               
               {/* Single beautifully styled premium product card (not selectable button) */}
               <div 
-                className="w-full p-6 rounded-3xl border border-gold-400/40 bg-gradient-to-br from-gold-400/[0.05] to-transparent text-left flex flex-col sm:flex-row sm:items-start justify-between gap-6 relative overflow-hidden shadow-[0_12px_40px_rgba(212,167,78,0.06)]"
+                className="w-full p-6 sm:p-8 rounded-3xl border border-gold-400/40 bg-gradient-to-br from-gold-500/[0.08] via-black/[0.6] to-transparent text-left flex flex-col md:flex-row md:items-center justify-between gap-8 relative shadow-[0_16px_50px_rgba(212,167,78,0.1)]"
               >
                 {activeTier.badge && (
-                  <div className="absolute top-0 right-10 bg-gold-400 text-black font-mono text-[8px] tracking-widest uppercase px-3 py-1 rounded-b-md font-bold">
+                  <div className="absolute top-0 -translate-y-1/2 right-4 sm:right-8 bg-gradient-to-r from-gold-400 to-gold-500 text-zinc-950 font-mono text-[8.5px] sm:text-[9px] tracking-[0.18em] uppercase px-3 py-1.5 rounded-full font-bold shadow-[0_0_15px_rgba(212,167,78,0.35)] border-none z-20">
                     {activeTier.badge}
                   </div>
                 )}
 
-                <div className="flex gap-5 items-start">
-                  <div className="p-3.5 rounded-2xl bg-gold-400/10 text-gold-400 border border-gold-400/20 shrink-0 mt-1">
+                <div className="flex gap-5 items-start md:max-w-[55%] pt-5 sm:pt-4 md:pt-0">
+                  <div className="p-4 rounded-2xl bg-gold-400/10 text-gold-400 border border-gold-400/20 shrink-0 mt-1 shadow-[0_0_15px_rgba(212,167,78,0.1)]">
                     <Sparkles className="w-6 h-6 animate-pulse" />
                   </div>
-                  <div className="space-y-1.5">
-                    <h4 className="text-xl font-bold text-white tracking-wide">
+                  <div className="space-y-2">
+                    <h4 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
                       {activeTier.title}
                     </h4>
-                    <span className="text-[10px] font-mono text-gold-400/80 tracking-widest uppercase block">
+                    <span className="text-[10px] sm:text-xs font-mono text-gold-400/95 tracking-[0.15em] uppercase block font-semibold">
                       {activeTier.subtitle}
                     </span>
-                    <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed max-w-sm sm:max-w-md pt-1.5">
+                    <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed pt-1">
                       {activeTier.desc}
                     </p>
                   </div>
                 </div>
 
-                <div className="text-left sm:text-right shrink-0 bg-black/40 p-5 rounded-2xl border border-white/5 space-y-3.5 sm:min-w-[200px] self-start">
-                  <div>
-                    <span className="text-[9px] sm:text-[10px] text-stone-500 font-mono block uppercase tracking-wider">
-                      Valor após o lançamento
+                <div className="text-left md:text-right shrink-0 bg-gradient-to-b from-stone-900/90 to-black/90 p-6 rounded-2xl border border-gold-400/25 space-y-4 md:min-w-[240px] md:self-stretch flex flex-col justify-center relative shadow-[0_8px_32px_rgba(0,0,0,0.8)] font-sans">
+                  {/* Subtle decorative glow */}
+                  <div className="absolute inset-0 bg-gold-400/[0.02] rounded-2xl pointer-events-none" />
+                  
+                  <div className="relative">
+                    <span className="text-[10px] text-stone-400/70 font-mono block uppercase tracking-wider">
+                      Preço Oficial Pós-Lançamento
                     </span>
-                    <span className="font-mono text-stone-500 line-through text-sm font-semibold mt-0.5 block">
+                    <span className="font-mono text-stone-400 line-through text-sm sm:text-base font-semibold mt-1.5 block">
                       R$ 62,00
                     </span>
                   </div>
 
-                  <div className="pt-2 border-t border-white/[0.04]">
-                    <span className="text-[9px] sm:text-[10px] text-gold-400 font-mono block uppercase tracking-widest font-semibold leading-relaxed">
-                      Valor promocional de lançamento
+                  <div className="pt-3.5 border-t border-white/[0.08] relative">
+                    <span className="text-[10px] text-gold-300 font-mono block uppercase tracking-widest font-bold leading-relaxed mb-1">
+                      Valor de lançamento
                     </span>
-                    <span className="font-mono text-2xl md:text-3xl text-gold-300 font-black block mt-0.5">
-                      R$ {activeTier.price}
-                    </span>
-                    <span className="inline-block mt-1.5 text-[8px] font-mono tracking-wider font-bold bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded border border-amber-500/20 uppercase">
-                      Condição Especial de Pré-Venda
-                    </span>
+                    <div className="flex flex-row md:justify-end items-baseline mt-1">
+                      <span className="font-sans text-3xl sm:text-4xl md:text-4xl font-bold text-gold-400 tracking-tight leading-none select-all">
+                        R$53,00
+                      </span>
+                    </div>
+                    <div className="mt-6">
+                      <span className="inline-block text-[8.5px] font-mono tracking-[0.18em] font-bold bg-emerald-500/[0.06] text-emerald-400/90 px-3 py-1.5 rounded-full border border-emerald-500/20 uppercase shadow-[0_4px_16px_rgba(16,185,129,0.05)]">
+                        Oferta Especial de Pré-Venda
+                      </span>
+                    </div>
                   </div>
 
-                  <span className="text-[9px] text-[#f59e0b] font-mono block pt-1">
+                  <span className="text-[10px] text-amber-500 font-mono block pt-1 font-semibold">
                     🚚 + Frete conforme CEP
                   </span>
                 </div>
@@ -173,13 +180,13 @@ export default function CheckoutSection() {
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="inline-block text-[8px] font-mono font-bold tracking-widest text-[#f59e0b] bg-[#f59e0b]/10 border border-[#f59e0b]/25 px-2 py-0.5 rounded uppercase font-semibold">
-                      Bônus exclusivo de compra
+                      Bônus exclusivo após compra
                     </span>
                   </div>
-                  <h4 className="text-sm font-semibold text-white tracking-wide">
+                  <h4 className="text-xs sm:text-sm font-semibold text-white tracking-wide whitespace-nowrap">
                     Desligue sua mente em 10 minutos
                   </h4>
-                  <span className="text-xs font-mono text-gold-400/90 block">
+                  <span className="text-[10px] sm:text-xs font-mono font-bold text-[#fbbf24] block whitespace-nowrap uppercase tracking-wider">
                     Meditação para dormir de verdade
                   </span>
                   <p className="text-[11px] text-stone-400 leading-relaxed font-light pt-1">
@@ -235,21 +242,21 @@ export default function CheckoutSection() {
                     <span className="text-[10px] font-mono tracking-widest text-[#a8a29e] uppercase block">Resumo do Pedido</span>
                     <div className="flex justify-between items-start gap-4">
                       <h3 className="font-display text-sm text-stone-200 font-medium">{activeTier.title}</h3>
-                      <div className="text-right">
-                        <span className="font-mono text-xs text-stone-300 block">R$ {activeTier.price}</span>
-                        <span className="text-[9px] text-emerald-400 font-mono block mt-0.5">Economia de R$ 9,00</span>
+                      <div className="text-right shrink-0">
+                        <span className="font-sans text-xs text-stone-300 block whitespace-nowrap">R${activeTier.price}</span>
+                        <span className="text-[9px] text-emerald-400 font-sans block mt-0.5 whitespace-nowrap">Economia de R$9,00</span>
                       </div>
                     </div>
                     {shippingCost !== null && (
-                      <div className="flex justify-between items-center text-xs text-stone-400">
-                        <span>Frete Correios/Transportadora:</span>
-                        <span className="font-mono text-stone-300">R$ {shippingCost.toFixed(2).replace(".", ",")}</span>
+                      <div className="flex justify-between items-center text-xs text-stone-400 gap-4">
+                        <span className="whitespace-nowrap">Frete Correios/Transportadora:</span>
+                        <span className="font-sans text-stone-300 whitespace-nowrap">R${shippingCost.toFixed(2).replace(".", ",")}</span>
                       </div>
                     )}
-                    <div className="flex justify-between items-center mt-3 pt-3 border-t border-white/[0.03]">
-                      <span className="text-xs text-stone-300 font-medium">Total a pagar:</span>
-                      <span className="font-mono text-lg text-gold-400 font-bold">
-                        R$ {(53.0 + (shippingCost || 0)).toFixed(2).replace(".", ",")}
+                    <div className="flex justify-between items-center mt-3 pt-3 border-t border-white/[0.03] gap-4">
+                      <span className="text-xs text-stone-300 font-medium whitespace-nowrap">Total a pagar:</span>
+                      <span className="font-sans text-lg text-gold-400 font-bold whitespace-nowrap">
+                        R${(53.0 + (shippingCost || 0)).toFixed(2).replace(".", ",")}
                       </span>
                     </div>
                     {shippingCost === null && (
@@ -257,6 +264,30 @@ export default function CheckoutSection() {
                         ⚠️ Insira seu CEP acima para somar o frete ao total
                       </p>
                     )}
+                  </div>
+
+                  {/* Elegant Payment Mini Cards */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="p-3 rounded-xl border border-white/[0.04] bg-stone-900/60 text-left space-y-1 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gold-400/[0.01] pointer-events-none" />
+                      <div className="flex items-center gap-1.5 text-gold-400">
+                        <CreditCard size={11} />
+                        <span className="text-[8.5px] font-mono tracking-wider font-bold uppercase">Cartão</span>
+                      </div>
+                      <p className="text-[9.5px] sm:text-[10.5px] text-stone-300 leading-tight font-light whitespace-nowrap">
+                        Até 2x sem juros
+                      </p>
+                    </div>
+                    <div className="p-3 rounded-xl border border-white/[0.04] bg-stone-900/60 text-left space-y-1 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-emerald-400/[0.01] pointer-events-none" />
+                      <div className="flex items-center gap-1.5 text-emerald-400">
+                        <Zap size={11} />
+                        <span className="text-[8.5px] font-mono tracking-wider font-bold uppercase">PIX</span>
+                      </div>
+                      <p className="text-[9.5px] sm:text-[10.5px] text-stone-300 leading-tight font-light whitespace-nowrap">
+                        3% de desconto no Pix
+                      </p>
+                    </div>
                   </div>
 
                   {/* Payment form */}
@@ -288,9 +319,6 @@ export default function CheckoutSection() {
                           <p className="text-xs text-stone-400 leading-relaxed font-light">
                             Pague via PIX e libere seu pedido de imediato. A compensação leva no máximo 15 segundos.
                           </p>
-                          <span className="inline-block text-[10px] font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/20 uppercase tracking-widest font-bold">
-                            Ganhe 3% de Desconto Extra
-                          </span>
                         </div>
                       )}
 
@@ -340,7 +368,7 @@ export default function CheckoutSection() {
                     <button
                       type="submit"
                       disabled={isProcessing}
-                      className="w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-amber-500 hover:shadow-[0_0_20px_rgba(197,141,52,0.3)] font-semibold text-xs font-mono uppercase tracking-[0.15em] text-black transition-all cursor-pointer disabled:opacity-50"
+                      className="w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-600 hover:from-emerald-600 hover:via-emerald-500 hover:to-teal-500 hover:shadow-[0_0_24px_rgba(16,185,129,0.35)] font-semibold text-xs font-mono uppercase tracking-[0.15em] text-white transition-all cursor-pointer disabled:opacity-50"
                       id="submit-checkout-btn"
                     >
                       {isProcessing ? (

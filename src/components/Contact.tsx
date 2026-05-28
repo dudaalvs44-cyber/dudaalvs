@@ -1,9 +1,9 @@
 import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function Contact() {
-  // Simulated WhatsApp number for the contact button
-  const whatsappNumber = "5511999998888"; 
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Olá! Gostaria de tirar dúvidas sobre o livro O Código Energético da Cura.`;
+  // WhatsApp number and pre-filled message for the contact button
+  const whatsappNumber = "5531999732836"; 
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20o%20livro%20O%20C%C3%B3digo%20Energ%C3%A9tico%20da%20Cura.`;
 
   return (
     <section
@@ -39,17 +39,17 @@ export default function Contact() {
             href={whatsappUrl}
             target="_blank"
             rel="noreferrer"
-            className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-4 px-10 py-5 rounded-xl bg-gradient-to-b from-stone-900 to-black border border-gold-400/30 text-white hover:border-gold-300/60 shadow-[0_4px_20px_rgba(0,0,0,0.6),0_0_15px_rgba(197,141,52,0.06)] hover:shadow-[0_4px_30px_rgba(0,0,0,0.8),0_0_25px_rgba(197,141,52,0.25)] hover:scale-[1.01] transition-all duration-300 cursor-pointer text-center"
+            className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-4 px-10 py-5 rounded-xl bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-600 hover:from-emerald-600 hover:via-emerald-500 hover:to-teal-500 border border-emerald-500/20 text-white shadow-[0_4px_20px_rgba(16,185,129,0.25)] hover:shadow-[0_4px_30px_rgba(16,185,129,0.45)] hover:scale-[1.01] transition-all duration-300 cursor-pointer text-center"
             id="whatsapp-contact-button"
           >
             {/* Ambient inner glow on hover */}
-            <div className="absolute inset-0 rounded-xl bg-gold-400/[0.01] group-hover:bg-gold-400/[0.04] transition-colors duration-300 pointer-events-none" />
+            <div className="absolute inset-0 rounded-xl bg-white/[0.01] group-hover:bg-white/[0.05] transition-colors duration-300 pointer-events-none" />
             
-            <div className="p-2 rounded-lg bg-black/40 border border-white/5 group-hover:border-gold-400/20 transition-colors">
-              <WhatsAppIcon size={18} className="shrink-0 drop-shadow-[0_0_6px_rgba(37,211,102,0.3)]" />
+            <div className="p-2 rounded-lg bg-white/10 border border-white/15 group-hover:bg-white/20 transition-all duration-300">
+              <WhatsAppIcon size={18} fill="#ffffff" className="shrink-0 drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]" />
             </div>
             
-            <span className="text-gold-300 font-semibold font-mono uppercase tracking-[0.12em] group-hover:text-gold-200 transition-colors text-xs text-left">
+            <span className="text-white font-semibold font-mono uppercase tracking-[0.12em] group-hover:text-stone-100 transition-colors text-xs text-left">
               Atendimento Individual
             </span>
           </a>

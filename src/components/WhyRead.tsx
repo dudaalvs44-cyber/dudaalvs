@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Key, Compass, Award, Brain, Sparkles, Heart, Activity } from "lucide-react";
+import { Key, Compass, Award, Brain, Sparkles, Heart, Activity, ShoppingBag } from "lucide-react";
 
 export default function WhyRead() {
   const benefits = [
@@ -38,13 +38,42 @@ export default function WhyRead() {
   return (
     <section
       id="por-que-ler"
-      className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden bg-gradient-to-b from-[#030303]/60 to-[#0c091b]/80"
+      className="relative pt-8 pb-16 md:pt-10 md:pb-24 px-4 md:px-8 overflow-hidden bg-gradient-to-b from-[#030303]/60 to-[#0c091b]/80"
     >
       {/* Background glow orb */}
       <div className="absolute right-0 top-1/4 w-[35vw] h-[35vw] rounded-full bg-gold-400/[0.03] blur-[100px] pointer-events-none" />
       <div className="absolute left-0 bottom-1/4 w-[35vw] h-[35vw] rounded-full bg-violet-600/[0.03] blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
+
+        {/* CTA "Comprar Livro" Button with beautiful glowing highlights */}
+        <motion.div 
+          initial={{ opacity: 0, y: -15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-2 mb-16 md:mt-4 md:mb-24 text-center flex flex-col items-center justify-center relative"
+        >
+          {/* Ambient inner soft green portal glow behind call to action */}
+          <div className="absolute -inset-8 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none" />
+          
+          <button
+            onClick={() => {
+              const element = document.getElementById("comprar");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-12 py-5 rounded-2xl bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-600 hover:from-emerald-600 hover:via-emerald-500 hover:to-teal-500 text-white font-semibold shadow-[0_10px_35px_rgba(16,185,129,0.35)] hover:shadow-[0_15px_50px_rgba(16,185,129,0.65)] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-xs sm:text-sm font-sans uppercase tracking-[0.12em] cursor-pointer"
+            id="cta-vibracional-top-buy-btn"
+          >
+            {/* Visual highlight aura border around the container */}
+            <span className="absolute -inset-px rounded-2xl border border-emerald-400/40 opacity-30 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+            
+            <ShoppingBag size={16} className="text-emerald-100 group-hover:scale-110 transition-transform duration-300" />
+            <span className="font-bold">Comprar Livro</span>
+          </button>
+        </motion.div>
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-16">

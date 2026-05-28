@@ -80,15 +80,15 @@ export default function Header() {
                 const element = document.querySelector("#comprar");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
               }}
-              className="relative px-5 py-2.5 rounded-full overflow-hidden border border-gold-400 bg-gold-400/5 hover:bg-gold-400 hover:text-black hover:shadow-[0_0_20px_rgba(197,141,52,0.3)] transition-all duration-500 group"
+              className="relative px-5 py-2.5 rounded-full overflow-hidden border border-emerald-500 bg-emerald-500/5 hover:bg-emerald-500 hover:text-white hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-500 group"
             >
               <span className="relative z-10 text-[10px] md:text-xs font-mono uppercase tracking-[0.15em] font-medium transition-colors duration-500">
                 comprar livro
               </span>
-              <div className="absolute inset-0 bg-gold-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-teal-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </button>
             <a
-              href="https://api.whatsapp.com/send?phone=5511999998888&text=Olá! Gostaria de tirar dúvidas sobre o livro O Código Energético da Cura."
+              href="https://api.whatsapp.com/send?phone=5531999732836&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20o%20livro%20O%20C%C3%B3digo%20Energ%C3%A9tico%20da%20Cura."
               target="_blank"
               rel="noreferrer"
               className="text-gray-400 hover:text-gold-300 p-2 transition-colors duration-300"
@@ -142,12 +142,12 @@ export default function Header() {
               <div className="grid grid-cols-2 gap-3 mt-4 pt-4 border-t border-white/[0.05]">
                 <button
                   onClick={() => scrollToSection("#comprar")}
-                  className="flex items-center justify-center py-3 rounded-xl bg-gold-400 text-black text-xs font-mono uppercase tracking-widest font-semibold hover:shadow-lg transition-all"
+                  className="flex items-center justify-center py-3 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-600 hover:from-emerald-600 hover:to-teal-500 text-white text-xs font-mono uppercase tracking-widest font-semibold hover:shadow-lg transition-all"
                 >
                   comprar livro
                 </button>
                 <a
-                  href="https://api.whatsapp.com/send?phone=5511999998888&text=Olá! Gostaria de tirar dúvidas sobre o livro O Código Energético da Cura."
+                  href="https://api.whatsapp.com/send?phone=5531999732836&text=Ol%C3%A1!%20Gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20o%20livro%20O%20C%C3%B3digo%20Energ%C3%A9tico%20da%20Cura."
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-2 py-3 rounded-xl border border-white/10 hover:border-gold-500/20 text-gray-300 text-xs font-mono uppercase tracking-widest"

@@ -28,7 +28,7 @@ export default function AboutBook() {
   return (
     <section
       id="o-livro"
-      className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden bg-black/30"
+      className="relative pt-16 pb-8 md:pt-24 md:pb-10 px-4 md:px-8 overflow-hidden bg-black/30"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         

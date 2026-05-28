@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Sparkles, ShoppingBag, ArrowDownCircle } from "lucide-react";
-import bookCover from "../assets/images/book_cover_mockup_1779401561656.png";
 
 type HeroProps = {
   onBuyClick: () => void;
@@ -64,7 +63,7 @@ export default function Hero({ onBuyClick }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative w-full h-[71vh] sm:h-[77vh] md:h-[80vh] min-h-[420px] max-h-[630px] sm:max-h-[700px] lg:max-h-[760px] bg-[#000000] overflow-hidden flex flex-col items-center justify-center select-none pt-[56px] sm:pt-[64px]"
+      className="relative w-full h-[68vh] sm:h-[72vh] md:h-[75vh] min-h-[400px] max-h-[560px] sm:max-h-[640px] lg:max-h-[700px] bg-[#000000] overflow-hidden flex flex-col items-center justify-center select-none pt-[20px] sm:pt-[28px]"
     >
       {/* 1. CINEMATIC AMBIENT HALO BACKDROP (Ambient Ambilight edge-glow) */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
@@ -92,10 +91,10 @@ export default function Hero({ onBuyClick }: HeroProps) {
       </div>
 
       {/* 2. ULTIMATE ASPECT-RATIO PRESERVING CONTAINER (100% visible, no offsets, no cropping) */}
-      <div className="relative w-full h-full flex items-start justify-center z-10 p-0 m-0">
+      <div className="relative w-full h-full flex items-center justify-center z-10 p-0 m-0">
         
         {/* Video Player block */}
-        <div className="relative w-full h-full flex items-start justify-center">
+        <div className="relative w-full h-full flex items-center justify-center">
           
           {/* Transparent click protector / anti-accidental-pauses layer */}
           <div className="absolute inset-0 z-20 pointer-events-auto bg-transparent select-none cursor-default" />
@@ -130,7 +129,7 @@ export default function Hero({ onBuyClick }: HeroProps) {
             onClick={(e) => e.preventDefault()}
             onLoadedData={() => setVideoLoaded(true)}
             onPlay={() => setPlaybackActive(true)}
-            className="w-full h-full object-contain object-top pointer-events-none select-none z-10 transition-transform duration-1000 scale-100 translate-y-4 sm:translate-y-6 md:translate-y-8 filter brightness-105 contrast-[1.03]"
+            className="w-full h-full object-contain object-center pointer-events-none select-none z-10 transition-transform duration-1000 scale-[1.08] sm:scale-[1.12] lg:scale-[1.15] -translate-y-8 sm:-translate-y-12 lg:-translate-y-15 filter brightness-105 contrast-[1.03]"
             style={{
               opacity: videoLoaded ? 1 : 0,
             }}
@@ -143,8 +142,8 @@ export default function Hero({ onBuyClick }: HeroProps) {
 
           {/* Shadows system to blend the movie seamlessly and cover elements */}
           {/* Subtle horizontal gradient soft-fade overlays to gently blend top and bottom with browser bar margins */}
-          <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-[#000000] via-[#000000]/40 to-transparent z-15 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#000000] via-[#000000]/65 to-transparent z-15 pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#000000] via-[#000000]/30 to-transparent z-15 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#000000] via-[#000000]/55 to-transparent z-15 pointer-events-none" />
 
           {/* 3. Watermark Cover Shield (VEO): High fidelity black-matching gradient vignette on the right/bottom-right lateral of the video */}
           {/* This applies a highly directional deep black gradient at the right bounds and bottom-right corner where 'VEO' is displayed */}
@@ -158,9 +157,9 @@ export default function Hero({ onBuyClick }: HeroProps) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: videoLoaded ? 1 : 0, y: videoLoaded ? 0 : 30 }}
         transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl z-30 pointer-events-auto"
+        className="absolute bottom-10 sm:bottom-12 md:bottom-14 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl z-30 pointer-events-auto"
       >
-        <div className="relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/[0.08] bg-[#050505]/75 backdrop-blur-xl p-4 md:p-6 shadow-[0_24px_50px_rgba(0,0,0,0.9)] flex flex-col md:flex-row items-center justify-between gap-5">
+        <div className="relative overflow-hidden rounded-xl md:rounded-2xl border border-white/[0.08] bg-[#050505]/75 backdrop-blur-xl py-3 px-4 md:py-3.5 md:px-6 shadow-[0_24px_50px_rgba(0,0,0,0.9)] flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
           
           {/* Glossy Reflection Highlight */}
           <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.01] via-white/[0.04] to-transparent pointer-events-none" />
@@ -169,30 +168,20 @@ export default function Hero({ onBuyClick }: HeroProps) {
           
           {/* Left Block: Media Indicator and Title */}
           <div className="flex items-center gap-4 w-full md:w-auto justify-center md:justify-start">
-            {/* Tiny Luxury Book Cover Thumbnail */}
-            <div className="relative shrink-0 hidden sm:block">
-              <div className="absolute -inset-1 rounded-lg bg-gradient-to-b from-gold-400/20 to-transparent blur-md opacity-70" />
-              <img
-                src={bookCover}
-                alt="Book cover miniature"
-                className="w-10 h-14 object-contain rounded border border-white/10 hover:border-gold-400/30 transition-colors duration-300"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-
+ 
             {/* Title / Description */}
             <div className="text-center md:text-left w-full md:w-auto space-y-0.5">
-              <h1 className="font-display text-sm sm:text-base md:text-lg font-bold tracking-wider uppercase bg-gradient-to-r from-white via-white to-gold-400 bg-clip-text text-transparent whitespace-nowrap">
+              <h1 className="font-display text-sm sm:text-base md:text-md lg:text-lg font-bold tracking-wider uppercase bg-gradient-to-r from-white via-white to-gold-400 bg-clip-text text-transparent whitespace-nowrap">
                 O Código Energético da Cura
               </h1>
             </div>
           </div>
-
+ 
           {/* Right Block: Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0 justify-center md:justify-end">
             <button
               onClick={onBuyClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-3 rounded-xl bg-gradient-to-r from-gold-500 to-amber-500 hover:from-gold-400 hover:to-amber-400 text-black font-semibold shadow-[0_4px_16px_rgba(212,167,78,0.2)] hover:shadow-[0_4px_24px_rgba(212,167,78,0.35)] active:scale-[0.98] transition-all duration-300 text-[11px] sm:text-xs font-mono uppercase tracking-widest cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 md:py-2.5 rounded-lg bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-700 hover:from-emerald-600 hover:via-emerald-500 hover:to-teal-600 text-white font-semibold shadow-[0_4px_20px_rgba(16,185,129,0.25)] hover:shadow-[0_4px_30px_rgba(16,185,129,0.45)] active:scale-[0.98] transition-all duration-300 text-[10px] sm:text-xs font-mono uppercase tracking-widest cursor-pointer"
               id="hero-buy-btn-cinematic"
             >
               <ShoppingBag size={13} />
@@ -203,7 +192,7 @@ export default function Hero({ onBuyClick }: HeroProps) {
         </div>
 
         {/* Swipe Down Hint Below the Dock */}
-        <div className="mt-3 text-center flex items-center justify-center gap-1.5 opacity-40 hover:opacity-100 transition-opacity duration-300">
+        <div className="mt-2 sm:mt-3 text-center flex items-center justify-center gap-1.5 opacity-40 hover:opacity-100 transition-opacity duration-300">
           <ArrowDownCircle className="w-3.5 h-3.5 text-gold-400 animate-bounce" />
           <span className="text-[8px] font-mono uppercase tracking-[0.3em] text-stone-400">
             Role para baixo para explorar o livro
