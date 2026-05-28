@@ -48,10 +48,10 @@ export default function WhyRead() {
 
         {/* CTA "Comprar Livro" Button with beautiful glowing highlights */}
         <motion.div 
-          initial={{ opacity: 0, y: -15 }}
+          initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.25 }}
           className="mt-2 mb-16 md:mt-4 md:mb-24 text-center flex flex-col items-center justify-center relative"
         >
           {/* Ambient inner soft green portal glow behind call to action */}
@@ -101,10 +101,10 @@ export default function WhyRead() {
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.98 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                transition={{ duration: 0.25 }}
                 className="glass-panel p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative"
               >
                 {/* Dynamic glossy light reflex inside the card */}

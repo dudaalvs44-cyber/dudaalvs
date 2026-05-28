@@ -111,10 +111,10 @@ export default function AboutBook() {
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                transition={{ duration: 0.25 }}
                 className="p-6 rounded-2xl bg-black/40 border border-white/[0.05] hover:border-gold-500/20 hover:bg-[#07060a] transition-all duration-300 flex flex-col items-start gap-4 cursor-pointer group"
               >
                 <div className="p-3 rounded-xl bg-gold-400/[0.04] border border-gold-400/20 text-gold-300 group-hover:text-gold-200 group-hover:bg-gold-400/[0.08] transition-all">

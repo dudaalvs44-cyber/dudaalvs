@@ -113,10 +113,10 @@ export default function Header() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.15 }}
             className="fixed inset-x-0 top-[60px] z-40 lg:hidden p-4 bg-[#030303]/95 border-b border-gold-500/20 backdrop-blur-xl shadow-2xl"
           >
             <div className="flex flex-col gap-3 py-4">

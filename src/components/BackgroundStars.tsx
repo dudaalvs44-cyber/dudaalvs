@@ -23,7 +23,7 @@ export default function BackgroundStars() {
     window.addEventListener("resize", handleResize);
 
     // Stars data
-    const starCount = 120;
+    const starCount = 60;
     const stars: Array<{
       x: number;
       y: number;
@@ -36,14 +36,14 @@ export default function BackgroundStars() {
       stars.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 1.2 + 0.2,
+        radius: Math.random() * 1.0 + 0.2,
         opacity: Math.random(),
-        twinkleSpeed: Math.random() * 0.02 + 0.005,
+        twinkleSpeed: Math.random() * 0.01 + 0.003,
       });
     }
 
     // Gold energy particles (flares)
-    const particleCount = 25;
+    const particleCount = 8;
     const particles: Array<{
       x: number;
       y: number;
@@ -59,33 +59,18 @@ export default function BackgroundStars() {
       particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 3 + 1,
-        speedY: -(Math.random() * 0.4 + 0.1),
-        speedX: (Math.random() - 0.5) * 0.2,
-        alpha: Math.random() * 0.5,
-        maxAlpha: Math.random() * 0.4 + 0.2,
-        growSpeed: Math.random() * 0.005 + 0.002,
+        radius: Math.random() * 2 + 1,
+        speedY: -(Math.random() * 0.3 + 0.1),
+        speedX: (Math.random() - 0.5) * 0.15,
+        alpha: Math.random() * 0.4,
+        maxAlpha: Math.random() * 0.3 + 0.15,
+        growSpeed: Math.random() * 0.003 + 0.001,
       });
     }
 
     // Animation Loop
     const render = () => {
       ctx.clearRect(0, 0, width, height);
-
-      // Deep celestial blue/indigo subtle background gradient to blend with the #030303 body
-      const gradient = ctx.createRadialGradient(
-        width / 2,
-        0,
-        height * 0.2,
-        width / 2,
-        height / 2,
-        width
-      );
-      gradient.addColorStop(0, "rgba(8, 7, 28, 0.4)");
-      gradient.addColorStop(0.5, "rgba(3, 3, 5, 0.2)");
-      gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, width, height);
 
       // Draw and update stars (twinkling)
       ctx.fillStyle = "#ffffff";
@@ -103,7 +88,7 @@ export default function BackgroundStars() {
 
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${Math.max(0.1, Math.min(star.opacity, 0.9))})`;
+        ctx.fillStyle = `rgba(255, 255, 255, ${Math.max(0.1, Math.min(star.opacity, 0.85))})`;
         ctx.fill();
       }
 
@@ -125,27 +110,14 @@ export default function BackgroundStars() {
         if (p.y < -10) {
           p.y = height + 10;
           p.x = Math.random() * width;
-          p.radius = Math.random() * 3 + 1;
+          p.radius = Math.random() * 2 + 1;
           p.alpha = 0.1;
         }
 
-        // Draw gold circular particle with shadow blur
+        // Standard solid gold circle drawing is infinitely faster than radial gradients
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        
-        // Golden glowing gradient
-        const pGlow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
-        pGlow.addColorStop(0, `rgba(247, 238, 214, ${p.alpha})`);
-        pGlow.addColorStop(0.4, `rgba(197, 141, 52, ${p.alpha * 0.8})`);
-        pGlow.addColorStop(1, "rgba(197, 141, 52, 0)");
-        
-        ctx.fillStyle = pGlow;
-        ctx.fill();
-        
-        // Outer glow
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.radius * 3, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(197, 141, 52, ${p.alpha * 0.15})`;
+        ctx.fillStyle = `rgba(197, 141, 52, ${Math.max(0.05, Math.min(p.alpha, 0.5))})`;
         ctx.fill();
       }
 

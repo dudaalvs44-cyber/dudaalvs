@@ -105,7 +105,7 @@ export default function Hero({ onBuyClick }: HeroProps) {
               <motion.div
                 initial={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 0.2 }}
                 className="absolute inset-0 bg-black z-30 flex flex-col items-center justify-center gap-3"
               >
                 <div className="relative w-12 h-12 flex items-center justify-center rounded-full border border-gold-400 bg-black/50">
@@ -154,9 +154,9 @@ export default function Hero({ onBuyClick }: HeroProps) {
 
       {/* 3. PREMIUM CINEMATIC GLASS DOCK (Hovering Overlay at the bottom margin) */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: videoLoaded ? 1 : 0, y: videoLoaded ? 0 : 30 }}
-        transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: videoLoaded ? 1 : 0, y: videoLoaded ? 0 : 15 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="absolute bottom-10 sm:bottom-12 md:bottom-14 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl z-30 pointer-events-auto"
       >
         <div className="relative overflow-hidden rounded-xl md:rounded-2xl border border-white/[0.08] bg-[#050505]/75 backdrop-blur-xl py-3 px-4 md:py-3.5 md:px-6 shadow-[0_24px_50px_rgba(0,0,0,0.9)] flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">

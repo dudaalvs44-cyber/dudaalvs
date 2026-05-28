@@ -81,10 +81,10 @@ export default function Testimonials() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTestimonial.id}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 5 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.4 }}
+              exit={{ opacity: 0, y: -5 }}
+              transition={{ duration: 0.2 }}
               className="glass-panel p-8 sm:p-12 rounded-3xl border border-gold-400/15 relative bg-zinc-950/40 backdrop-blur-xl"
             >
               <div className="flex flex-col items-center text-center space-y-6">
