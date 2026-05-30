@@ -6,12 +6,12 @@ export default function AboutBook() {
     {
       icon: Atom,
       title: "Física Quântica",
-      desc: "Deixamos de lado os dogmas mecânicos para abraçar o fato comprovado: o observador altera a realidade. Compreenda o campo unificado de possibilidades que molda sua saúde física e emocional.",
+      desc: "A física quântica demonstrou que o observador interfere no sistema observado. O que isso significa para a sua saúde? Que a forma como você percebe, interpreta e intenciona sua realidade tem efeito mensurável sobre sua biologia.",
     },
     {
       icon: Compass,
       title: "Radiestesia Vibracional",
-      desc: "Aprenda a decifrar as energias sutis de ambientes e de pessoas. A radiestesia atua como um tradutor biológico para medir frequências ocultas e reestabelecer o equilíbrio perfeito.",
+      desc: "A radiestesia terapêutica lê o campo energético de ambientes e pessoas. Identifica padrões de desequilíbrio que o corpo já registra, antes mesmo que os sintomas se manifestem.",
     },
     {
       icon: Lightbulb,
@@ -43,7 +43,7 @@ export default function AboutBook() {
           </div>
           
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide text-white leading-tight">
-            A Fusão Inevitável de Duas Grandes Eras
+            O Que a Sua Biologia Já Sabe — E a Sua Mente Ainda Não Ouviu
           </h2>
           
           <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
@@ -65,11 +65,11 @@ export default function AboutBook() {
             </p>
             
             <p className="border-l-2 border-gold-400/30 pl-4 py-2 italic text-stone-400 bg-white/[0.01]">
-              "Quando você altera o spin dos seus átomos pelo poder da intenção e do alinhamento radiestésico, a biologia obedece. A cura não é algo que você compra, é um estado que você sintoniza."
+              "Quando você reconfigura o campo de intenção que orienta seus padrões biológicos, algo no organismo começa a responder. A cura não é algo que você compra. É um estado que você aprende a sintonizar. A radiestesia terapêutica é o instrumento que torna essa sintonização possível."
             </p>
             
             <p>
-              Em <strong className="text-white font-normal">O Código Energético da Cura</strong>, você aprenderá técnicas de autoavaliação vibracional, a utilizar instrumentos clássicos da radiestesia e a formatar meditações coerentes capazes de reorganizar a entropia do seu próprio corpo orgânico.
+              Em <strong className="text-white font-normal">O Código Energético da Cura</strong>, você aprenderá técnicas de autoavaliação vibracional, a utilizar instrumentos clássicos da radiestesia e a formatar meditações coerentes capazes de aumentar a ordem biológica do seu próprio organismo, o que a física chama de negentropia: o princípio vital que toda célula saudável expressa.
             </p>
           </div>
 
@@ -83,9 +83,9 @@ export default function AboutBook() {
             
             <div className="space-y-6">
               {[
-                { lvl: "Frequência Mental", freq: "80Hz - 250Hz", text: "Coerência dos pensamentos e cancelamento de crenças cristalizadas." },
-                { lvl: "Frequência Cardíaca", freq: "350Hz - 500Hz", text: "O dínamo magnético do peito. Expansão do sentimento e gratidão ativa." },
-                { lvl: "Frequência Consciencial", freq: "500Hz - 700Hz+", text: "Espírito e matéria fundidos na radiestesia quântica. Paz duradoura." }
+                { lvl: "Frequência Mental", freq: "Coerência dos Pensamentos", text: "Quando padrões de crença cristalizados se dissolvem, o cérebro migra dos ritmos acelerados de Beta para os estados de Alfa e Theta, o território fértil da intuição e da cura profunda." },
+                { lvl: "Frequência Cardíaca", freq: "O Dínamo Magnético do Peito", text: "O coração é o maior gerador eletromagnético do corpo humano. Quando sentimentos de gratidão e amor se expandem, o campo cardíaco reorganiza a coerência de todo o organismo." },
+                { lvl: "Frequência Consciencial", freq: "Espírito e Matéria em Diálogo", text: "Quando a mente se aquieta e o campo energético se alinha, o organismo experimenta o que a neurociência chama de coerência global. A radiestesia terapêutica é o instrumento que permite acessar e harmonizar esse estado." }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start pb-4 border-b border-white/[0.04] last:border-0 last:pb-0">
                   <div className="font-mono text-xs text-gold-400 bg-gold-400/10 h-7 w-7 rounded-lg flex items-center justify-center shrink-0">

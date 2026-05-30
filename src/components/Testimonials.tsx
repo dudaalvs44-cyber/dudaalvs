@@ -7,24 +7,24 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       id: "1",
-      author: "",
-      role: "",
+      author: "G.R.",
+      role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
       text: "Queria agradecer do fundo do meu coração por esse período que me ajudou com o tratamento energético.\nParece que eu estava em uma poeira de coisas que me cobriam e você veio, fez sua leitura e me deu uma chave pra que eu colocasse cada coisa no seu lugar. Acho que é muito difícil explicar isso pra quem não fez, pra quem não conhece. Mas, juntar a terapia com a sua leitura foi uma das coisas mais potentes que já vivenciei. Foi como trazer o meu eu de volta, como se o que tivesse perdido fosse encontrado.\nNunca vou saber descrever como foi viver essa experiência. Muito obrigada!\nIsso foi fundamental pra que eu conseguisse entrar em uma nova fase da minha vida.",
       rating: 5,
       avatar: "",
     },
     {
       id: "2",
-      author: "",
-      role: "",
+      author: "V. Q.",
+      role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
       text: "Trabalho incrível com resultados surpreendentes. Mas uma dica: só procure o trabalho dela se estiver disposto(a) a ter sua vida transformada.",
       rating: 5,
       avatar: "",
     },
     {
       id: "5",
-      author: "",
-      role: "",
+      author: "R.V.",
+      role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
       text: "Passando para te fazer um resumo das minhas mudanças após toda sua ajuda, orientação e carinho.\nNo âmbito pessoal, consegui me desvencilhar de pessoas que estavam me causando problemas, atrasos e pesos emocionais.\nNo âmbito financeiro, comecei a destravar meus ganhos e passei a enxergar minha empresa de forma mais próspera, com resultados reais.\nMeu relacionamento, que andava muito complexo, com brigas, entraves e desencontros, melhorou muito. Hoje, nosso dia a dia está mais leve, feliz, e estamos mais próximos e unidos.\nNo campo mental, consigo fazer planos com mais clareza, dormir melhor e sentir minha energia se renovando a cada dia.",
       rating: 5,
       avatar: "",
@@ -100,6 +100,22 @@ export default function Testimonials() {
                 <p className="font-sans text-stone-200 text-sm sm:text-base md:text-lg leading-relaxed font-light tracking-wide italic max-w-2xl mx-auto whitespace-pre-line">
                   “{activeTestimonial.text}”
                 </p>
+
+                {/* Author Info */}
+                {(activeTestimonial.author || activeTestimonial.role) && (
+                  <div className="pt-2 text-center">
+                    {activeTestimonial.author && (
+                      <h4 className="font-display text-sm sm:text-base font-semibold tracking-wide text-white">
+                        {activeTestimonial.author}
+                      </h4>
+                    )}
+                    {activeTestimonial.role && (
+                      <p className="font-sans text-[11px] sm:text-xs text-gold-400 mt-1 max-w-lg mx-auto opacity-90 font-light leading-relaxed">
+                        {activeTestimonial.role}
+                      </p>
+                    )}
+                  </div>
+                )}
 
               </div>
             </motion.div>

@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="max-w-xl space-y-3">
           <div className="flex items-center justify-center gap-1.5 text-gold-400">
             <Sparkles size={14} className="animate-spin-slow" />
-            <span className="text-[10px] font-mono uppercase tracking-[0.2em]">SINTONIA INICIÁTICA</span>
+            <span className="text-[10px] font-mono uppercase tracking-[0.2em]">VIVIANE MIRANDA</span>
             <Sparkles size={14} className="animate-spin-slow" />
           </div>
           

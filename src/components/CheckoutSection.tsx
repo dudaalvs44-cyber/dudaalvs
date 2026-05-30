@@ -76,7 +76,7 @@ export default function CheckoutSection() {
           </h2>
           
           <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
-            Invista na sua expansão energética. Plataforma de checkout blindada e segura.
+            Seu pedido é realizado com total segurança. Em poucos dias, o livro chega até você junto com o bônus exclusivo.
           </p>
         </div>
 
@@ -183,12 +183,12 @@ export default function CheckoutSection() {
                       Bônus exclusivo após compra
                     </span>
                   </div>
-                  <h4 className="text-xs sm:text-sm font-semibold text-white tracking-wide whitespace-nowrap">
-                    Desligue sua mente em 10 minutos
+                  <h4 className="text-xs sm:text-sm font-semibold text-white tracking-wide">
+                    Meditação de Reconfiguração Noturna
                   </h4>
-                  <span className="text-[10px] sm:text-xs font-mono font-bold text-[#fbbf24] block whitespace-nowrap uppercase tracking-wider">
-                    Meditação para dormir de verdade
-                  </span>
+                  <p className="text-[11px] text-gold-400 font-light leading-relaxed">
+                    Libere o que o dia acumulou no seu campo energético e entre em sono regenerador.
+                  </p>
                   <p className="text-[11px] text-stone-400 leading-relaxed font-light pt-1">
                     Liberado automaticamente por e-mail após a confirmação da compra.
                   </p>

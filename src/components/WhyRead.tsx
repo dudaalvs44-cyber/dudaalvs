@@ -5,33 +5,33 @@ export default function WhyRead() {
   const benefits = [
     {
       icon: Compass,
-      title: "Expansão da Consciência",
-      desc: "Questione as limitações do ego e visualize novas dimensões de percepção onde você é o co-criador consciente do seu bem-estar diário.",
+      title: "Fundamentos reais da radiestesia",
+      desc: "A radiestesia não é prática recente nem crença sem fundamento. O livro apresenta sua história milenar e os princípios da física que explicam o funcionamento do pêndulo, da energia de forma e dos cristais como instrumentos de leitura bioenergética.",
     },
     {
       icon: Key,
-      title: "Desbloqueio Emocional",
-      desc: "Dissolva os bloqueios psicossomáticos invisíveis acumulados em seu sistema biológico que provocam dores, indisposição crônica ou cansaço.",
+      title: "O campo energético do seu corpo",
+      desc: "Aura, chakras e corpos sutis são apresentados sob uma perspectiva bioenergética. A tabela de Hawkins oferece um mapa dos níveis de consciência que organiza essa leitura e mostra como padrões emocionais se inscrevem no campo antes de chegar ao corpo físico.",
     },
     {
       icon: Activity,
-      title: "Equilíbrio Energético",
-      desc: "Alinhe sua malha magnética através de protocolos práticos de hertz e do uso equilibrado da mesa radiestésica em casa ou profissionalmente.",
+      title: "Energia nos ambientes e nas relações",
+      desc: "Os espaços onde vivemos e as relações que mantemos carregam campos energéticos que afetam nosso equilíbrio. O livro mostra como o radiestesista faz a leitura e a harmonização desses campos, incluindo o uso de cristais e ervas nos processos de reequilíbrio",
     },
     {
       icon: Brain,
-      title: "Clareza Mental Superior",
-      desc: "Reduza os picos de estresse, melhore a qualidade de repouso e alcance foco estável acalmando frequências cerebrais de Beta para Alfa.",
+      title: "Frequências sonoras e o corpo",
+      desc: "As frequências sonoras atuam sobre o organismo por mecanismos de ressonância que a física descreve e a biologia registra. O livro mostra como elas são usadas como ferramenta de harmonização energética e qual é o princípio que fundamenta essa atuação.",
     },
     {
       icon: Sparkles,
-      title: "Desenvolvimento Espiritual",
-      desc: "Integre preceitos de ciências físicas fundamentadas com a elevação espiritual lúcida, sem dogmas pesados, com leveza transcendental.",
+      title: "Espiritualidade, consciência e materialização",
+      desc: "O livro aborda espiritualidade, consciência e materialização de objetivos sem dogmas e sem contradição com o conhecimento científico. Uma leitura que amplia a percepção sem pedir que o leitor abandone o que já sabe.",
     },
     {
       icon: Heart,
-      title: "Conexão Interior Primal",
-      desc: "Estruture o canal de intuição inata do seu coração para obter sabedoria instantânea em momentos críticos de tomadas de decisões difíceis.",
+      title: "Práticas para aplicar em casa",
+      desc: "Cada capítulo termina com técnicas de autoavaliação e reequilíbrio que o leitor pode fazer sozinho, sem atendimento presencial. Os protocolos incluem uso de pêndulo, cristais, ervas e frequências sonoras, com orientações claras sobre cada etapa.",
     },
   ];
 
@@ -80,13 +80,13 @@ export default function WhyRead() {
           <div className="flex items-center justify-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
             <span className="text-[10px] sm:text-xs font-mono tracking-[0.3em] text-gold-400 uppercase font-semibold">
-              MUDANÇA VIBRACIONAL
+              O QUE MUDA DENTRO DE VOCÊ
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
           </div>
           
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide text-white leading-tight">
-            Quais Portais se Abrirão Para Você?
+            O Que Cada Capítulo Vai Despertar
           </h2>
           
           <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
