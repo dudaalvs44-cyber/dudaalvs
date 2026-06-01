@@ -11,17 +11,17 @@ export default function WhyRead() {
     {
       icon: Key,
       title: "O campo energético do seu corpo",
-      desc: "Aura, chakras e corpos sutis são apresentados sob uma perspectiva bioenergética. A tabela de Hawkins oferece um mapa dos níveis de consciência que organiza essa leitura e mostra como padrões emocionais se inscrevem no campo antes de chegar ao corpo físico.",
+      desc: "Aura, chakras e corpos sutis são apresentados sob uma perspectiva bioenergética. A tabela de Hawkins oferece um mapa dos níveis de consciência que organiza essa leitura e mostra como padrões emocionais habitam o campo energético antes de chegarem ao corpo físico.",
     },
     {
       icon: Activity,
       title: "Energia nos ambientes e nas relações",
-      desc: "Os espaços onde vivemos e as relações que mantemos carregam campos energéticos que afetam nosso equilíbrio. O livro mostra como o radiestesista faz a leitura e a harmonização desses campos, incluindo o uso de cristais e ervas nos processos de reequilíbrio",
+      desc: "Os espaços onde vivemos e as relações que mantemos carregam campos energéticos que afetam nosso equilíbrio. O livro mostra como essa leitura e harmonização são feitas na prática, incluindo o uso de cristais e ervas no processo de reequilíbrio.",
     },
     {
       icon: Brain,
       title: "Frequências sonoras e o corpo",
-      desc: "As frequências sonoras atuam sobre o organismo por mecanismos de ressonância que a física descreve e a biologia registra. O livro mostra como elas são usadas como ferramenta de harmonização energética e qual é o princípio que fundamenta essa atuação.",
+      desc: "As frequências sonoras atuam diretamente sobre o organismo. O livro mostra como usá-las como ferramenta de harmonização no dia a dia.",
     },
     {
       icon: Sparkles,

@@ -15,7 +15,7 @@ export default function CheckoutSection() {
     title: "Edição Suprema",
     subtitle: "Livro Físico Premium",
     price: "53,00",
-    desc: "Uma experiência exclusiva para quem deseja aprofundar os ensinamentos de O Código Energético da Cura, com bônus exclusivo após a compra.",
+    desc: "Uma experiência exclusiva para quem deseja ir mais fundo nos ensinamentos de O Código Energético da Cura.",
     features: [
       "Edição física especial de lançamento",
       "Bônus exclusivo após compra",
@@ -154,7 +154,7 @@ export default function CheckoutSection() {
             </div>
 
             {/* List of features for the product */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-zinc-950/60 border border-white/[0.04]">
+            <div className="p-4 sm:p-6 md:p-8 rounded-2xl bg-zinc-950/60 border border-white/[0.04]">
               <h3 className="text-sm font-mono tracking-widest font-bold text-gold-400 uppercase mb-5">
                 Benefícios da Edição Suprema
               </h3>
@@ -163,7 +163,7 @@ export default function CheckoutSection() {
                 {activeTier.features.map((feature, i) => (
                   <div key={i} className="flex gap-3 items-start">
                     <div className="h-5 w-5 rounded-full bg-gold-400/10 flex items-center justify-center border border-gold-400/20 text-gold-300 shrink-0 mt-0.5">
-                      <Check size={11} />
+                       <Check size={11} />
                     </div>
                     <span className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed">{feature}</span>
                   </div>
@@ -171,26 +171,26 @@ export default function CheckoutSection() {
               </div>
 
               {/* Highlight Banner about the exclusive Video Bonus */}
-              <div className="mt-6 p-4 rounded-xl border border-gold-500/20 bg-gradient-to-r from-gold-500/[0.03] to-orange-500/[0.03] flex items-start gap-3.5 text-left">
-                <div className="text-gold-400 p-2 bg-gold-400/5 rounded-lg border border-gold-400/20 shrink-0 mt-0.5">
-                  <svg className="w-5 h-5 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              <div className="mt-8 p-3.5 sm:p-5 rounded-xl border border-gold-500/10 bg-black/30 flex items-start gap-2.5 sm:gap-4 text-left">
+                <div className="text-gold-400 p-2 bg-gold-400/5 rounded-lg border border-gold-400/10 shrink-0">
+                  <svg className="w-4 h-4 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <span className="inline-block text-[8px] font-mono font-bold tracking-widest text-[#f59e0b] bg-[#f59e0b]/10 border border-[#f59e0b]/25 px-2 py-0.5 rounded uppercase font-semibold">
-                      Bônus exclusivo após compra
+                <div className="space-y-2.5 flex-1 min-w-0">
+                  <div className="border-b border-white/[0.04] pb-2 text-left">
+                    <span className="block text-[10.5px] font-mono tracking-[0.18em] text-[#f59e0b] font-bold uppercase mb-1">
+                      BÔNUS EXCLUSIVO
                     </span>
+                    <h4 className="text-[10px] min-[360px]:text-[11px] sm:text-xs md:text-sm font-semibold text-white tracking-tight whitespace-nowrap">
+                      Meditação de Reconfiguração Noturna
+                    </h4>
                   </div>
-                  <h4 className="text-xs sm:text-sm font-semibold text-white tracking-wide">
-                    Meditação de Reconfiguração Noturna
-                  </h4>
-                  <p className="text-[11px] text-gold-400 font-light leading-relaxed">
+                  <p className="text-[11px] text-stone-300 font-light leading-relaxed">
                     Libere o que o dia acumulou no seu campo energético e entre em sono regenerador.
                   </p>
-                  <p className="text-[11px] text-stone-400 leading-relaxed font-light pt-1">
-                    Liberado automaticamente por e-mail após a confirmação da compra.
+                  <p className="text-[10px] text-stone-500 font-mono tracking-wide">
+                    📬 Liberação automática por e-mail após a confirmação da compra
                   </p>
                 </div>
               </div>

@@ -6,7 +6,7 @@ export default function AboutBook() {
     {
       icon: Atom,
       title: "Física Quântica",
-      desc: "A física quântica demonstrou que o observador interfere no sistema observado. O que isso significa para a sua saúde? Que a forma como você percebe, interpreta e intenciona sua realidade tem efeito mensurável sobre sua biologia.",
+      desc: "A física quântica demonstrou que o observador interfere no sistema observado. O que isso significa para a sua saúde? Que a forma como você percebe, interpreta e dirige sua intenção para a realidade tem efeito real sobre sua biologia.",
     },
     {
       icon: Compass,
@@ -16,12 +16,12 @@ export default function AboutBook() {
     {
       icon: Lightbulb,
       title: "O Poder da Mente",
-      desc: "Mente e cérebro correlacionados numa sinfonia eletromagnética. Descubra como programar suas ondas cerebrais para gerar cura celular autodirigida e regenerar canais de força obstruídos.",
+      desc: "Mente e cérebro trabalham numa sinfonia eletromagnética. Descubra como alinhar suas ondas cerebrais para despertar a cura que já existe dentro de você.",
     },
     {
       icon: Orbit,
       title: "Conexão e Expansão",
-      desc: "Uma expansão pragmática que conecta a sabedoria transcendental do espírito com a exatidão biológica moderna, unificando seus chakras e corpos energéticos sutis.",
+      desc: "Uma ponte entre a sabedoria espiritual e o conhecimento biológico moderno, para que você vivencie a expansão sem precisar abandonar o que já sabe.",
     },
   ];
 
@@ -37,7 +37,7 @@ export default function AboutBook() {
           <div className="flex items-center justify-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
             <span className="text-[10px] sm:text-xs font-mono tracking-[0.3em] text-gold-400 uppercase font-semibold">
-              O PROPÓSITO SUPREMO
+              O QUE VOCÊ VAI DESCOBRIR
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
           </div>
@@ -47,7 +47,7 @@ export default function AboutBook() {
           </h2>
           
           <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
-            Entender como curar a sua vida não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro desvenda cientificamente como alinhar a biologia profunda à vibração cósmica.
+            Entender como curar a sua vida não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro revela como alinhar a biologia profunda à vibração cósmica, com linguagem que a ciência já começa a compreender.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function AboutBook() {
             </h3>
             
             <p>
-              Ao longo de anos de pesquisas e de atendimentos, a autora decodificou um padrão unificado no qual as emoções humanas atuam com assinaturas de Hertz mensuráveis. Sentimentos estagnados de angústia ou de escassez operam em baixas frequências que corroem o tecido da matéria biológica.
+              A ciência já demonstrou que as emoções humanas carregam frequências mensuráveis. Sentimentos de angústia e de escassez vibram em frequências baixas, e o corpo registra isso antes mesmo que a mente perceba.
             </p>
             
             <p className="border-l-2 border-gold-400/30 pl-4 py-2 italic text-stone-400 bg-white/[0.01]">
@@ -79,13 +79,13 @@ export default function AboutBook() {
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold-400/5 rounded-full blur-3xl" />
             
             <span className="font-mono text-[9px] tracking-widest text-gold-400/60 uppercase block mb-2">CAMPOS UNIFICADOS</span>
-            <h4 className="font-display text-lg text-white font-medium mb-4">Os Graus Espirituais da Cura</h4>
+            <h4 className="font-display text-lg text-white font-medium mb-4">As Três Dimensões da Cura</h4>
             
             <div className="space-y-6">
               {[
                 { lvl: "Frequência Mental", freq: "Coerência dos Pensamentos", text: "Quando padrões de crença cristalizados se dissolvem, o cérebro migra dos ritmos acelerados de Beta para os estados de Alfa e Theta, o território fértil da intuição e da cura profunda." },
-                { lvl: "Frequência Cardíaca", freq: "O Dínamo Magnético do Peito", text: "O coração é o maior gerador eletromagnético do corpo humano. Quando sentimentos de gratidão e amor se expandem, o campo cardíaco reorganiza a coerência de todo o organismo." },
-                { lvl: "Frequência Consciencial", freq: "Espírito e Matéria em Diálogo", text: "Quando a mente se aquieta e o campo energético se alinha, o organismo experimenta o que a neurociência chama de coerência global. A radiestesia terapêutica é o instrumento que permite acessar e harmonizar esse estado." }
+                { lvl: "Frequência Cardíaca", freq: "O Campo Magnético do Coração", text: "O coração é o maior gerador eletromagnético do corpo humano. Quando sentimentos de gratidão e amor se expandem, o campo cardíaco reorganiza a coerência de todo o organismo." },
+                { lvl: "Frequência Consciencial", freq: "Espírito e Matéria em Diálogo", text: "Quando a mente se aquieta e o campo energético se alinha, o organismo experimenta uma coerência profunda que a ciência e a espiritualidade descrevem com palavras diferentes para o mesmo estado. A radiestesia terapêutica é o instrumento que permite acessar e harmonizar esse estado." }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start pb-4 border-b border-white/[0.04] last:border-0 last:pb-0">
                   <div className="font-mono text-xs text-gold-400 bg-gold-400/10 h-7 w-7 rounded-lg flex items-center justify-center shrink-0">
