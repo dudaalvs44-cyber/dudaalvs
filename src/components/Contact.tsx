@@ -29,7 +29,7 @@ export default function Contact() {
           </h2>
           
           <p className="font-sans text-stone-400 text-xs sm:text-sm leading-relaxed tracking-wide font-light max-w-lg mx-auto">
-            Tem dúvidas sobre o livro ou deseja agendar um atendimento individual de frequência energética? Clique abaixo para iniciar uma conversa direta de acolhimento.
+            Tem dúvidas sobre o livro ou deseja agendar um atendimento individual de frequência energética? Clique abaixo para iniciar uma conversa com presença e acolhimento.
           </p>
         </div>
 

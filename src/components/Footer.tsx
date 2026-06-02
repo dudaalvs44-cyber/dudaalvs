@@ -42,7 +42,7 @@ export default function Footer() {
               O Código Energético da Cura
             </span>
             <span className="block text-[10px] font-mono">
-              © {currentYear} Viviane Marques De Miranda. Todos os direitos reservados.
+              © {currentYear} Viviane Marques de Miranda. Todos os direitos reservados.
             </span>
           </div>
 
@@ -55,7 +55,7 @@ export default function Footer() {
               <Lock size={10} /> Privacidade Assegurada
             </a>
             <div className="flex items-center gap-1 select-none text-gold-500/60 font-semibold">
-              <Shield size={10} /> Criptografia Quântica
+              <Shield size={10} /> Pagamento 100% Seguro
             </div>
           </div>
 

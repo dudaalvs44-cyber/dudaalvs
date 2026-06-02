@@ -67,7 +67,7 @@ export default function AboutAuthor() {
               </p>
               
               <p>
-                Neste livro, integra fundamentos científicos, neurociência e comportamento humano às práticas energéticas, apresentando uma abordagem integrativa sobre o poder da mente nos processos de saúde e cura.
+                Neste livro, integra fundamentos científicos, neurociência e comportamento humano às práticas energéticas, apresentando uma abordagem integrativa sobre a relação entre mente, biologia e consciência no caminho do equilíbrio e da expansão.
               </p>
             </div>
 

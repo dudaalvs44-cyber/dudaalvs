@@ -47,7 +47,7 @@ export default function AboutBook() {
           </h2>
           
           <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
-            Entender como curar a sua vida não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro revela como alinhar a biologia profunda à vibração cósmica, com linguagem que a ciência já começa a compreender.
+            Entender como curar a sua vida não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro revela como integrar o que a biologia e a neurociência descrevem ao que as práticas energéticas milenares experienciam, uma leitura que amplia sem fragmentar.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function AboutBook() {
           {/* Poetic & Deep Scientific Narrative */}
           <div className="space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed tracking-wide font-light">
             <h3 className="font-display text-xl md:text-2xl text-gold-300 font-medium">
-              Por que a medicina e a física modernas estão convergindo neste código?
+              O que acontece quando a ciência e a consciência falam sobre o mesmo fenômeno com palavras diferentes?
             </h3>
             
             <p>
