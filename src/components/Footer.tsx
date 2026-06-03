@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       id="app-footer"
-      className="relative py-16 px-4 md:px-8 bg-zinc-950 border-t border-gold-400/10 overflow-hidden"
+      className="relative z-30 pt-8 pb-12 px-4 md:px-8 bg-zinc-950 border-t border-gold-400/10 overflow-hidden"
     >
       {/* Background ambient lighting */}
       <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] rounded-full bg-gold-400/[0.02] blur-[100px] pointer-events-none" />
@@ -14,7 +14,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center space-y-12">
         
         {/* Core inspirational quote in luxury display typography */}
-        <div className="max-w-xl space-y-3">
+        <div className="max-w-xl space-y-3 relative z-10">
           <div className="flex items-center justify-center gap-1.5 text-gold-400">
             <Sparkles size={14} className="animate-spin-slow" />
             <span className="text-[10px] font-mono uppercase tracking-[0.2em]">VIVIANE MIRANDA</span>
@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           
           <h3 className="font-display text-lg sm:text-xl md:text-2xl text-stone-200 italic font-medium leading-relaxed tracking-wide">
-            “A verdadeira cura começa quando você desperta sua consciência.”
+            A verdadeira cura começa quando você desperta sua consciência.
           </h3>
         </div>
 

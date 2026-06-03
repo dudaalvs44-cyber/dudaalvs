@@ -43,7 +43,7 @@ export default function AboutBook() {
           </div>
           
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide text-white leading-tight">
-            O Que a Sua Biologia Já Sabe — E a Sua Mente Ainda Não Ouviu
+            O Que a Sua Biologia Já Sabe E a Sua Mente Ainda Não Ouviu
           </h2>
           
           <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">

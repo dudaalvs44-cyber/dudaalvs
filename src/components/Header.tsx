@@ -8,10 +8,20 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled((prev) => {
+            const scrolled = window.scrollY > 50;
+            return prev !== scrolled ? scrolled : prev;
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -47,11 +57,8 @@ export default function Header() {
               <div className="absolute inset-0 bg-gradient-to-tr from-gold-500/10 to-transparent animate-pulse" />
             </div>
             <div>
-              <span className="block font-display text-sm md:text-base tracking-[0.2em] text-white font-medium uppercase">
-                O Código Energético
-              </span>
-              <span className="block text-[8px] tracking-[0.35em] text-gold-400 font-mono uppercase">
-                Ciência • Cura • Consciência
+              <span className="block font-display text-[10.5px] min-[360px]:text-xs md:text-sm lg:text-base tracking-[0.15em] text-white font-medium uppercase whitespace-nowrap">
+                O Código Energético Da Cura
               </span>
             </div>
           </div>

@@ -19,7 +19,7 @@ export default function AboutAuthor() {
           <div className="flex items-center justify-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
             <span className="text-[10px] sm:text-xs font-mono tracking-[0.3em] text-gold-400 uppercase font-semibold">
-              Trajetória Editorial
+              Trajetória profissional
             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
           </div>

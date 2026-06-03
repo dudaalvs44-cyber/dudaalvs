@@ -9,15 +9,15 @@ export default function Testimonials() {
       id: "1",
       author: "G.R.",
       role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
-      text: "Queria agradecer do fundo do meu coração por esse período que me ajudou com o tratamento energético.\nParece que eu estava em uma poeira de coisas que me cobriam e você veio, fez sua leitura e me deu uma chave pra que eu colocasse cada coisa no seu lugar. Acho que é muito difícil explicar isso pra quem não fez, pra quem não conhece. Mas, juntar a terapia com a sua leitura foi uma das coisas mais potentes que já vivenciei. Foi como trazer o meu eu de volta, como se o que tivesse perdido fosse encontrado.\nNunca vou saber descrever como foi viver essa experiência. Muito obrigada!\nIsso foi fundamental pra que eu conseguisse entrar em uma nova fase da minha vida.",
+      text: "Você veio, fez sua leitura e me deu uma chave pra que eu colocasse cada coisa no seu lugar. Foi como trazer o meu eu de volta.",
       rating: 5,
       avatar: "",
     },
     {
       id: "2",
-      author: "V. Q.",
+      author: "V.Q.",
       role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
-      text: "Trabalho incrível com resultados surpreendentes. Mas uma dica: só procure o trabalho dela se estiver disposto(a) a ter sua vida transformada.",
+      text: "Trabalho incrível com resultados surpreendentes. Mas uma dica: só procure o trabalho dela se estiver disposto a ter sua vida transformada.",
       rating: 5,
       avatar: "",
     },
@@ -25,7 +25,23 @@ export default function Testimonials() {
       id: "5",
       author: "R.V.",
       role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
-      text: "Passando para te fazer um resumo das minhas mudanças após toda sua ajuda, orientação e carinho.\nNo âmbito pessoal, consegui me desvencilhar de pessoas que estavam me causando problemas, atrasos e pesos emocionais.\nNo âmbito financeiro, comecei a destravar meus ganhos e passei a enxergar minha empresa de forma mais próspera, com resultados reais.\nMeu relacionamento, que andava muito complexo, com brigas, entraves e desencontros, melhorou muito. Hoje, nosso dia a dia está mais leve, feliz, e estamos mais próximos e unidos.\nNo campo mental, consigo fazer planos com mais clareza, dormir melhor e sentir minha energia se renovando a cada dia.",
+      text: "Consegui me desvencilhar de pessoas que me causavam problemas. Destravar meus ganhos financeiros. Meu relacionamento melhorou muito. No campo mental, consigo fazer planos com mais clareza e sentir minha energia se renovando a cada dia.",
+      rating: 5,
+      avatar: "",
+    },
+    {
+      id: "6",
+      author: "R.S.",
+      role: "Belo Horizonte, Alinhamento de Campos Sutis, Divórcio Energético e Materialização",
+      text: "Suas palavras, orientações e diagnósticos foram precisos e certeiros. Tudo o que me foi dito acabou se concretizando.",
+      rating: 5,
+      avatar: "",
+    },
+    {
+      id: "7",
+      author: "R.S.V.",
+      role: "Belo Horizonte, Alinhamento de Campos Sutis, Divórcio Energético e Materialização",
+      text: "Você me ajudou a eliminar todas as incertezas que existiam em minha vida e a realinhar meus sonhos, tornando-os mais reais, claros e alcançáveis.",
       rating: 5,
       avatar: "",
     },
@@ -55,12 +71,11 @@ export default function Testimonials() {
         
         {/* Title Block */}
         <div className="text-center space-y-4 mb-12 md:mb-16">
-          <div className="flex items-center justify-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
-            <span className="text-[10px] sm:text-xs font-mono tracking-[0.3em] text-gold-400 uppercase font-semibold">
-              VIDAS REGENERADAS
+          <div className="flex items-center justify-center gap-2 md:gap-2.5 whitespace-nowrap">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold-400 shrink-0" />
+            <span className="text-[10px] sm:text-xs font-mono tracking-[0.15em] sm:tracking-[0.2em] text-gold-400 uppercase font-semibold">
+              resultados reais VIDAS QUE MUDARAM
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
           </div>
           
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-white leading-tight max-w-3xl mx-auto">

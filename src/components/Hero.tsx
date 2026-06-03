@@ -171,7 +171,7 @@ export default function Hero({ onBuyClick }: HeroProps) {
  
             {/* Title / Description */}
             <div className="text-center md:text-left w-full md:w-auto space-y-0.5">
-              <h1 className="font-display text-sm sm:text-base md:text-md lg:text-lg font-bold tracking-wider uppercase bg-gradient-to-r from-white via-white to-gold-400 bg-clip-text text-transparent whitespace-nowrap">
+              <h1 className="font-display text-[11px] min-[360px]:text-sm sm:text-base md:text-md lg:text-lg font-bold tracking-wider uppercase bg-gradient-to-r from-white via-white to-gold-400 bg-clip-text text-transparent whitespace-nowrap">
                 O Código Energético da Cura
               </h1>
             </div>

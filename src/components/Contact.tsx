@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section
       id="contato"
-      className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden bg-black/60 border-t border-white/[0.03]"
+      className="relative z-20 pt-16 md:pt-20 pb-8 md:pb-10 px-4 md:px-8 overflow-hidden bg-black border-t border-white/[0.03]"
     >
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40vw] h-[40vw] rounded-full bg-gold-400/[0.02] blur-[120px] pointer-events-none" />
 

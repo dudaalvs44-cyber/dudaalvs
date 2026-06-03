@@ -14,13 +14,28 @@ export default function BackgroundStars() {
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
-    // Dynamic resize handler
+    // Pre-calculate rgba strings to avoid garbage collection overhead in the rendering loop
+    const starColorCache: string[] = [];
+    const goldColorCache: string[] = [];
+    for (let i = 0; i <= 100; i++) {
+      const opacity = i / 100;
+      starColorCache.push(`rgba(255, 255, 255, ${parseFloat(Math.max(0.1, Math.min(opacity, 0.85)).toFixed(3))}`);
+      goldColorCache.push(`rgba(197, 141, 52, ${parseFloat(Math.max(0.05, Math.min(opacity, 0.5)).toFixed(3))}`);
+    }
+
+    // Dynamic resize handler with requestAnimationFrame debounce to reduce layout thrashing
+    let resizeTimeout: number;
     const handleResize = () => {
-      if (!canvas) return;
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      if (resizeTimeout) {
+        cancelAnimationFrame(resizeTimeout);
+      }
+      resizeTimeout = requestAnimationFrame(() => {
+        if (!canvas) return;
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize, { passive: true });
 
     // Stars data
     const starCount = 60;
@@ -70,10 +85,15 @@ export default function BackgroundStars() {
 
     // Animation Loop
     const render = () => {
+      // Pause drawing when tab is inactive to save CPU/GPU cycles
+      if (document.hidden) {
+        animationFrameId = requestAnimationFrame(render);
+        return;
+      }
+
       ctx.clearRect(0, 0, width, height);
 
       // Draw and update stars (twinkling)
-      ctx.fillStyle = "#ffffff";
       for (let i = 0; i < starCount; i++) {
         const star = stars[i];
         
@@ -88,7 +108,10 @@ export default function BackgroundStars() {
 
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${Math.max(0.1, Math.min(star.opacity, 0.85))})`;
+        
+        // Use cached background colors
+        const colorIndex = Math.max(0, Math.min(100, Math.round(star.opacity * 100)));
+        ctx.fillStyle = starColorCache[colorIndex];
         ctx.fill();
       }
 
@@ -114,10 +137,12 @@ export default function BackgroundStars() {
           p.alpha = 0.1;
         }
 
-        // Standard solid gold circle drawing is infinitely faster than radial gradients
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(197, 141, 52, ${Math.max(0.05, Math.min(p.alpha, 0.5))})`;
+        
+        // Use cached background colors
+        const colorIndex = Math.max(0, Math.min(100, Math.round(p.alpha * 100)));
+        ctx.fillStyle = goldColorCache[colorIndex];
         ctx.fill();
       }
 
@@ -128,6 +153,7 @@ export default function BackgroundStars() {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      if (resizeTimeout) cancelAnimationFrame(resizeTimeout);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
