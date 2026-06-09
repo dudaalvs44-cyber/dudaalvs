@@ -129,7 +129,7 @@ export default function Hero({ onBuyClick }: HeroProps) {
             onClick={(e) => e.preventDefault()}
             onLoadedData={() => setVideoLoaded(true)}
             onPlay={() => setPlaybackActive(true)}
-            className="w-full h-full object-contain object-center pointer-events-none select-none z-10 transition-transform duration-1000 scale-[1.08] sm:scale-[1.12] lg:scale-[1.15] -translate-y-8 sm:-translate-y-12 lg:-translate-y-15 filter brightness-105 contrast-[1.03]"
+            className="w-full h-full object-contain object-center pointer-events-none select-none z-10 transition-transform duration-1000 scale-[1.08] sm:scale-[1.12] lg:scale-[1.15] -translate-y-15 sm:-translate-y-22 lg:-translate-y-26 filter brightness-105 contrast-[1.03]"
             style={{
               opacity: videoLoaded ? 1 : 0,
             }}
@@ -157,7 +157,7 @@ export default function Hero({ onBuyClick }: HeroProps) {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: videoLoaded ? 1 : 0, y: videoLoaded ? 0 : 15 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="absolute bottom-10 sm:bottom-12 md:bottom-14 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl z-30 pointer-events-auto"
+        className="absolute bottom-16 sm:bottom-[11vh] md:bottom-[13vh] left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-5xl z-30 pointer-events-auto"
       >
         <div className="relative overflow-hidden rounded-xl md:rounded-2xl border border-white/[0.08] bg-[#050505]/75 backdrop-blur-xl py-3 px-4 md:py-3.5 md:px-6 shadow-[0_24px_50px_rgba(0,0,0,0.9)] flex flex-col md:flex-row items-center justify-between gap-4 md:gap-5">
           
@@ -181,11 +181,11 @@ export default function Hero({ onBuyClick }: HeroProps) {
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0 justify-center md:justify-end">
             <button
               onClick={onBuyClick}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 md:py-2.5 rounded-lg bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-700 hover:from-emerald-600 hover:via-emerald-500 hover:to-teal-600 text-white font-semibold shadow-[0_4px_20px_rgba(16,185,129,0.25)] hover:shadow-[0_4px_30px_rgba(16,185,129,0.45)] active:scale-[0.98] transition-all duration-300 text-[10px] sm:text-xs font-mono uppercase tracking-widest cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 md:py-2.5 rounded-lg bg-gradient-to-r from-emerald-700 via-emerald-600 to-teal-700 hover:from-emerald-600 hover:via-emerald-500 hover:to-teal-600 text-white font-semibold shadow-[0_4px_20px_rgba(16,185,129,0.25)] hover:shadow-[0_4px_30px_rgba(16,185,129,0.45)] active:scale-[0.98] transition-all duration-300 text-[10px] sm:text-xs font-sans uppercase tracking-wider cursor-pointer"
               id="hero-buy-btn-cinematic"
             >
               <ShoppingBag size={13} />
-              comprar livro
+              Comprar livro
             </button>
           </div>
 

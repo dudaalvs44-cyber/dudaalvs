@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           
           <h3 className="font-display text-lg sm:text-xl md:text-2xl text-stone-200 italic font-medium leading-relaxed tracking-wide">
-            A verdadeira cura começa quando você desperta sua consciência.
+            A transformação começa quando você desperta sua consciência.
           </h3>
         </div>
 

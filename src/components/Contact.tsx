@@ -29,7 +29,7 @@ export default function Contact() {
           </h2>
           
           <p className="font-sans text-stone-400 text-xs sm:text-sm leading-relaxed tracking-wide font-light max-w-lg mx-auto">
-            Tem dúvidas sobre o livro ou deseja agendar um atendimento individual de frequência energética? Clique abaixo para iniciar uma conversa com presença e acolhimento.
+            Tem dúvidas sobre o livro ou deseja agendar um atendimento individual de alinhamento energético? Clique abaixo para iniciar uma conversa com presença e acolhimento.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function Contact() {
         </div>
         
         <p className="text-[10px] font-mono text-stone-500 uppercase tracking-widest mt-8">
-          Resposta média em até 30 minutos em horário comercial • Atendimento Individualizado
+          Resposta média em até 2 horas em horário comercial • Atendimento Individualizado
         </p>
       </div>
     </section>

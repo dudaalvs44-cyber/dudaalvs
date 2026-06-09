@@ -8,15 +8,15 @@ export default function Testimonials() {
     {
       id: "1",
       author: "G.R.",
-      role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
-      text: "Você veio, fez sua leitura e me deu uma chave pra que eu colocasse cada coisa no seu lugar. Foi como trazer o meu eu de volta.",
+      role: "Belo Horizonte, Atendimento Individual de Alinhamento e Divórcio Energético",
+      text: "Você veio, fez sua leitura e me deu uma chave para que eu colocasse cada coisa no seu lugar. Foi como trazer o meu eu de volta.",
       rating: 5,
       avatar: "",
     },
     {
       id: "2",
       author: "V.Q.",
-      role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
+      role: "Belo Horizonte, Atendimento Individual de Alinhamento e Divórcio Energético",
       text: "Trabalho incrível com resultados surpreendentes. Mas uma dica: só procure o trabalho dela se estiver disposto a ter sua vida transformada.",
       rating: 5,
       avatar: "",
@@ -24,7 +24,7 @@ export default function Testimonials() {
     {
       id: "5",
       author: "R.V.",
-      role: "Belo Horizonte, atendimento individual de alinhamento e divórcio energético",
+      role: "Belo Horizonte, Atendimento Individual de Alinhamento e Divórcio Energético",
       text: "Consegui me desvencilhar de pessoas que me causavam problemas. Destravar meus ganhos financeiros. Meu relacionamento melhorou muito. No campo mental, consigo fazer planos com mais clareza e sentir minha energia se renovando a cada dia.",
       rating: 5,
       avatar: "",
@@ -83,7 +83,7 @@ export default function Testimonials() {
           </h2>
           
           <p className="font-sans text-stone-400 text-xs sm:text-sm leading-relaxed tracking-wider font-light max-w-lg mx-auto">
-            Depoimentos reais de pessoas que vivenciaram a harmonia e a prática dos atendimentos.
+            Relatos de quem vivenciou os atendimentos e a leitura do livro.
           </p>
         </div>
 

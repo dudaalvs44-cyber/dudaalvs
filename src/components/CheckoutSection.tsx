@@ -260,7 +260,7 @@ export default function CheckoutSection() {
                       </span>
                     </div>
                     {shippingCost === null && (
-                      <p className="text-[10px] text-amber-500 font-mono text-right animate-pulse">
+                      <p className="text-[9px] min-[360px]:text-[10px] text-amber-500 font-mono text-right animate-pulse whitespace-nowrap">
                         ⚠️ Insira seu CEP acima para somar o frete ao total
                       </p>
                     )}

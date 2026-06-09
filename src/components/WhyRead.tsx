@@ -11,7 +11,7 @@ export default function WhyRead() {
     {
       icon: Key,
       title: "O campo energético do seu corpo",
-      desc: "Aura, chakras e corpos sutis são apresentados sob uma perspectiva bioenergética. A tabela de Hawkins oferece um mapa dos níveis de consciência que organiza essa leitura e mostra como padrões emocionais habitam o campo energético antes de chegarem ao corpo físico.",
+      desc: "Aura, chakras e corpos sutis são apresentados sob uma perspectiva bioenergética. A tabela de Hawkins oferece um mapa de níveis de consciência que organiza essa leitura e mostra como padrões emocionais e o campo energético se relacionam dentro dessa perspectiva integrativa.",
     },
     {
       icon: Activity,
