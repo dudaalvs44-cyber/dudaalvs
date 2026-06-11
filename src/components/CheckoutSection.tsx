@@ -141,7 +141,7 @@ export default function CheckoutSection() {
                     </div>
                     <div className="mt-6">
                       <span className="inline-block text-[8.5px] font-mono tracking-[0.18em] font-bold bg-emerald-500/[0.06] text-emerald-400/90 px-3 py-1.5 rounded-full border border-emerald-500/20 uppercase shadow-[0_4px_16px_rgba(16,185,129,0.05)]">
-                        Oferta Especial de Pré-Venda
+                        Valor de Lançamento
                       </span>
                     </div>
                   </div>
@@ -260,7 +260,7 @@ export default function CheckoutSection() {
                       </span>
                     </div>
                     {shippingCost === null && (
-                      <p className="text-[9px] min-[360px]:text-[10px] text-amber-500 font-mono text-right animate-pulse whitespace-nowrap">
+                      <p className="text-[9px] min-[360px]:text-[10px] text-amber-500 font-mono text-center animate-pulse whitespace-nowrap mt-3 mb-1">
                         ⚠️ Insira seu CEP acima para somar o frete ao total
                       </p>
                     )}

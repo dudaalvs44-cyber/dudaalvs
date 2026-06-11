@@ -29,7 +29,7 @@ export default function AboutAuthor() {
           </h2>
           
           <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
-            Conheça o percurso científico e o propósito integrativo da autora Viviane Marques de Miranda.
+            Conheça o percurso científico e o propósito integrativo da autora.
           </p>
         </div>
 
@@ -38,6 +38,10 @@ export default function AboutAuthor() {
           
           {/* Left Column: Picture and Quote */}
           <div className="lg:col-span-6 flex flex-col items-center text-center space-y-4 w-full mx-auto">
+            <h3 className="font-display text-2xl sm:text-3xl text-gold-400 font-semibold tracking-wide mb-2">
+              Viviane Marques de Miranda
+            </h3>
+
             <div className="relative w-full max-w-[380px] sm:max-w-[460px] lg:max-w-full aspect-[4/5] rounded-2xl overflow-hidden border border-gold-400/20 shadow-[0_25px_60px_rgba(0,0,0,0.85)]">
               <img
                 src={authorImg}
@@ -46,12 +50,6 @@ export default function AboutAuthor() {
                 referrerPolicy="no-referrer"
                 id="author-avatar-img"
               />
-            </div>
-            
-            <div className="text-center pt-8 sm:pt-10 pb-2">
-              <h3 className="font-display text-2xl text-white font-semibold tracking-wide">
-                Viviane Marques de Miranda
-              </h3>
             </div>
           </div>
 
@@ -63,7 +61,7 @@ export default function AboutAuthor() {
               </p>
               
               <p>
-                Com mais de trinta anos de experiência na docência, dedica-se ao estudo das relações entre biologia, mente e energia.
+                Com mais de 32 anos de experiência na docência, dedica-se ao estudo das relações entre biologia, mente e energia.
               </p>
               
               <p>
@@ -89,7 +87,7 @@ export default function AboutAuthor() {
                 </div>
                 <div className="space-y-0.5">
                   <span className="text-[10px] font-mono text-stone-500 uppercase tracking-wider block">Docência</span>
-                  <span className="text-xs sm:text-sm font-semibold text-white tracking-wide">+30 Anos de Experiência</span>
+                  <span className="text-xs sm:text-sm font-semibold text-white tracking-wide">+32 Anos de Experiência</span>
                 </div>
               </div>
 
