@@ -6,7 +6,7 @@ export default function AboutBook() {
     {
       icon: Atom,
       title: "Física Quântica",
-      desc: "A física quântica demonstrou que o observador interfere no sistema observado. O que isso significa para a sua saúde? Que a forma como você percebe, interpreta e dirige sua intenção para a realidade tem efeito real sobre sua biologia.",
+      desc: "A neurociência já demonstrou que a forma como percebemos e interpretamos a realidade influencia diretamente nossas respostas biológicas. Emoções, intenções e crenças deixam marcas mensuráveis no organismo, e o livro mostra como trabalhar com isso conscientemente.",
     },
     {
       icon: Compass,
@@ -20,7 +20,7 @@ export default function AboutBook() {
     },
     {
       icon: Orbit,
-      title: "Conexão e Expansão",
+      title: "Consciência e Expansão",
       desc: "Uma ponte entre a sabedoria espiritual e o conhecimento biológico moderno, para que você vivencie a expansão sem precisar abandonar o que já sabe.",
     },
   ];
@@ -65,7 +65,7 @@ export default function AboutBook() {
             </p>
             
             <p className="border-l-2 border-gold-400/30 pl-4 py-2 italic text-stone-400 bg-white/[0.01]">
-              "Quando você reconfigura o campo de intenção que orienta seus padrões biológicos, algo no organismo começa a responder. A cura não é algo que você compra. É um estado que você aprende a sintonizar. A radiestesia terapêutica é o instrumento que torna essa sintonização possível."
+              Quando você reconfigura a forma como percebe e sente sua própria vida, algo no organismo começa a responder. A cura não é algo que você compra. É um estado que você aprende a sintonizar. A radiestesia terapêutica é o instrumento que torna essa sintonização possível. Viviane Miranda
             </p>
             
             <p>

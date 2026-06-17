@@ -192,9 +192,9 @@ export default function Hero({ onBuyClick }: HeroProps) {
         </div>
 
         {/* Swipe Down Hint Below the Dock */}
-        <div className="mt-2 sm:mt-3 text-center flex items-center justify-center gap-1.5 opacity-40 hover:opacity-100 transition-opacity duration-300">
+        <div className="mt-4 text-center flex items-center justify-center gap-1.5 opacity-60 hover:opacity-100 transition-opacity duration-300">
           <ArrowDownCircle className="w-3.5 h-3.5 text-gold-400 animate-bounce" />
-          <span className="text-[8px] font-mono uppercase tracking-[0.3em] text-stone-400">
+          <span className="text-[8px] font-mono uppercase tracking-[0.3em] text-white" id="hero-scroll-hint-text">
             Role para baixo para explorar o livro
           </span>
         </div>
