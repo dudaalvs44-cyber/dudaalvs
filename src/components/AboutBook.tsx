@@ -11,12 +11,12 @@ export default function AboutBook() {
     {
       icon: Compass,
       title: "Radiestesia Vibracional",
-      desc: "A radiestesia terapêutica lê o campo energético de ambientes e pessoas. Identifica padrões de desequilíbrio que o corpo já registra, antes mesmo que os sintomas se manifestem.",
+      desc: "A radiestesia terapêutica lê o campo energético de ambientes e pessoas. Identifica padrões de desequilíbrio energético percebidos no campo, mesmo antes de se tornarem conscientes.",
     },
     {
       icon: Lightbulb,
       title: "O Poder da Mente",
-      desc: "Mente e cérebro trabalham numa sinfonia eletromagnética. Descubra como alinhar suas ondas cerebrais para despertar a cura que já existe dentro de você.",
+      desc: "Mente e cérebro trabalham numa sinfonia eletromagnética. Descubra como alinhar suas ondas cerebrais para despertar o equilíbrio que já existe dentro de você.",
     },
     {
       icon: Orbit,
@@ -47,7 +47,7 @@ export default function AboutBook() {
           </h2>
           
           <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
-            Entender como curar a sua vida não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro revela como integrar o que a biologia e a neurociência descrevem ao que as práticas energéticas milenares experienciam, uma leitura que amplia sem fragmentar.
+            Entender como reorganizar sua energia não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro mostra como a biologia e a neurociência explicam, em sua linguagem, o que as práticas energéticas milenares já vivenciam há séculos. Uma leitura que amplia sem fragmentar.
           </p>
         </div>
 
@@ -57,15 +57,16 @@ export default function AboutBook() {
           {/* Poetic & Deep Scientific Narrative */}
           <div className="space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed tracking-wide font-light">
             <h3 className="font-display text-xl md:text-2xl text-gold-300 font-medium">
-              O que acontece quando a ciência e a consciência falam sobre o mesmo fenômeno com palavras diferentes?
+              O que acontece quando a ciência e a consciência descrevem o mesmo fenômeno com palavras diferentes?
             </h3>
             
             <p>
-              A ciência já demonstrou que as emoções humanas carregam frequências mensuráveis. Sentimentos de angústia e de escassez vibram em frequências baixas, e o corpo registra isso antes mesmo que a mente perceba.
+              A ciência já demonstrou que as emoções humanas se expressam em sinais fisiológicos mensuráveis, variações de ritmo cardíaco, tensão muscular, padrões de respiração. Estados de angústia e de escassez deixam marcas no corpo antes mesmo que a mente os reconheça.
             </p>
             
             <p className="border-l-2 border-gold-400/30 pl-4 py-2 italic text-stone-400 bg-white/[0.01]">
-              Quando você reconfigura a forma como percebe e sente sua própria vida, algo no organismo começa a responder. A cura não é algo que você compra. É um estado que você aprende a sintonizar. A radiestesia terapêutica é o instrumento que torna essa sintonização possível. Viviane Miranda
+              Quando você reconfigura a forma como percebe e sente sua própria vida, algo no organismo começa a responder. A cura não é algo que você compra. É um estado que você aprende a sintonizar. A radiestesia terapêutica é o instrumento que torna essa sintonização possível.
+              <span className="block not-italic text-xs text-gold-400/80 mt-2 font-medium">Viviane Miranda</span>
             </p>
             
             <p>
@@ -84,7 +85,7 @@ export default function AboutBook() {
             <div className="space-y-6">
               {[
                 { lvl: "Frequência Mental", freq: "Coerência dos Pensamentos", text: "Quando padrões de crença cristalizados se dissolvem, o cérebro migra dos ritmos acelerados de Beta para os estados de Alfa e Theta, o território fértil da intuição e da cura profunda." },
-                { lvl: "Frequência Cardíaca", freq: "O Campo Magnético do Coração", text: "O coração é o maior gerador eletromagnético do corpo humano. Quando sentimentos de gratidão e amor se expandem, o campo cardíaco reorganiza a coerência de todo o organismo." },
+                { lvl: "Frequência Cardíaca", freq: "O Campo Magnético do Coração", text: "O coração é o maior gerador eletromagnético do corpo humano. Quando sentimentos de gratidão e amor se expandem, o campo cardíaco eleva a coerência de todo o organismo." },
                 { lvl: "Frequência Consciencial", freq: "Espírito e Matéria em Diálogo", text: "Quando a mente se aquieta e o campo energético se alinha, o organismo experimenta uma coerência profunda que a ciência e a espiritualidade descrevem com palavras diferentes para o mesmo estado. A radiestesia terapêutica é o instrumento que permite acessar e harmonizar esse estado." }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4 items-start pb-4 border-b border-white/[0.04] last:border-0 last:pb-0">
