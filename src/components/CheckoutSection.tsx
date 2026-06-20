@@ -1,5 +1,5 @@
 import { useState, FormEvent } from "react";
-import { Check, ClipboardCheck, CreditCard, ShieldCheck, ShoppingBag, Truck, Zap, Sparkles, Loader2 } from "lucide-react";
+import { Check, ClipboardCheck, CreditCard, ShieldCheck, ShoppingBag, Truck, Zap, Sparkles, Loader2, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 export default function CheckoutSection() {
@@ -14,7 +14,7 @@ export default function CheckoutSection() {
     id: "combo",
     title: "Edição Suprema",
     subtitle: "Livro Físico Premium",
-    price: "53,00",
+    price: "55,00",
     desc: "Uma experiência exclusiva para quem deseja ir mais fundo nos ensinamentos de O Código Energético da Cura.",
     features: [
       "Edição física especial de lançamento",
@@ -75,7 +75,7 @@ export default function CheckoutSection() {
             Adquira o Livro Oficial
           </h2>
           
-          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center">
             Seu pedido é realizado com total segurança. Em poucos dias, o livro chega até você junto com o bônus exclusivo.
           </p>
         </div>
@@ -92,61 +92,61 @@ export default function CheckoutSection() {
               
               {/* Single beautifully styled premium product card (not selectable button) */}
               <div 
-                className="w-full p-6 sm:p-8 rounded-3xl border border-gold-400/40 bg-gradient-to-br from-gold-500/[0.08] via-black/[0.6] to-transparent text-left flex flex-col md:flex-row md:items-center justify-between gap-8 relative shadow-[0_16px_50px_rgba(212,167,78,0.1)]"
+                className="w-full p-4 sm:p-6 md:p-8 rounded-3xl border border-gold-400/40 bg-gradient-to-br from-gold-500/[0.08] via-black/[0.6] to-transparent text-left flex flex-col md:flex-row md:items-center justify-between gap-5 md:gap-8 relative shadow-[0_16px_50px_rgba(212,167,78,0.1)]"
               >
                 {activeTier.badge && (
-                  <div className="absolute top-0 -translate-y-1/2 right-4 sm:right-8 bg-gradient-to-r from-gold-400 to-gold-500 text-zinc-950 font-mono text-[8.5px] sm:text-[9px] tracking-[0.18em] uppercase px-3 py-1.5 rounded-full font-bold shadow-[0_0_15px_rgba(212,167,78,0.35)] border-none z-20">
+                  <div className="absolute top-0 -translate-y-1/2 right-4 sm:right-8 bg-gradient-to-r from-gold-400 to-gold-500 text-zinc-950 font-mono text-[8px] sm:text-[9px] tracking-[0.18em] uppercase px-2.5 py-1 rounded-full font-bold shadow-[0_0_15px_rgba(212,167,78,0.35)] border-none z-20">
                     {activeTier.badge}
                   </div>
                 )}
 
-                <div className="flex gap-5 items-start md:max-w-[55%] pt-5 sm:pt-4 md:pt-0">
-                  <div className="p-4 rounded-2xl bg-gold-400/10 text-gold-400 border border-gold-400/20 shrink-0 mt-1 shadow-[0_0_15px_rgba(212,167,78,0.1)]">
-                    <Sparkles className="w-6 h-6 animate-pulse" />
+                <div className="flex gap-4 sm:gap-5 items-start md:max-w-[55%] pt-3 sm:pt-4 md:pt-0">
+                  <div className="p-3 sm:p-4 rounded-2xl bg-gold-400/10 text-gold-400 border border-gold-400/20 shrink-0 mt-1 shadow-[0_0_15px_rgba(212,167,78,0.15)]">
+                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 md:space-y-2">
                     <h4 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
                       {activeTier.title}
                     </h4>
                     <span className="text-[10px] sm:text-xs font-mono text-gold-400/95 tracking-[0.15em] uppercase block font-semibold">
                       {activeTier.subtitle}
                     </span>
-                    <p className="text-xs sm:text-sm text-stone-300 font-light leading-relaxed pt-1">
+                    <p className="text-xs sm:text-sm text-stone-300 font-light leading-normal sm:leading-relaxed pt-0.5 text-left">
                       {activeTier.desc}
                     </p>
                   </div>
                 </div>
 
-                <div className="text-left md:text-right shrink-0 bg-gradient-to-b from-stone-900/90 to-black/90 p-6 rounded-2xl border border-gold-400/25 space-y-4 md:min-w-[240px] md:self-stretch flex flex-col justify-center relative shadow-[0_8px_32px_rgba(0,0,0,0.8)] font-sans">
+                <div className="text-left md:text-right shrink-0 bg-gradient-to-b from-stone-900/90 to-black/90 p-4 sm:p-6 rounded-2xl border border-gold-400/25 space-y-3.5 md:space-y-4 md:min-w-[240px] md:self-stretch flex flex-col justify-center relative shadow-[0_8px_32px_rgba(0,0,0,0.8)] font-sans">
                   {/* Subtle decorative glow */}
                   <div className="absolute inset-0 bg-gold-400/[0.02] rounded-2xl pointer-events-none" />
                   
                   <div className="relative">
-                    <span className="text-[10px] text-stone-400/70 font-mono block uppercase tracking-wider">
+                    <span className="text-[9px] sm:text-[10px] text-stone-400/70 font-mono block uppercase tracking-wider">
                       Preço Oficial Pós-Lançamento
                     </span>
-                    <span className="font-mono text-stone-400 line-through text-sm sm:text-base font-semibold mt-1.5 block">
+                    <span className="font-mono text-stone-400 line-through text-xs sm:text-base font-semibold mt-1 block">
                       R$ 62,00
                     </span>
                   </div>
 
                   <div className="pt-3.5 border-t border-white/[0.08] relative">
-                    <span className="text-[10px] text-gold-300 font-mono block uppercase tracking-widest font-bold leading-relaxed mb-1">
+                    <span className="text-[9px] sm:text-[10px] text-gold-300 font-mono block uppercase tracking-widest font-bold leading-relaxed mb-0.5">
                       Valor de lançamento
                     </span>
                     <div className="flex flex-row md:justify-end items-baseline mt-1">
-                      <span className="font-sans text-3xl sm:text-4xl md:text-4xl font-bold text-gold-400 tracking-tight leading-none select-all">
-                        R$53,00
+                      <span className="font-sans text-2xl sm:text-4xl md:text-4xl font-bold text-gold-400 tracking-tight leading-none select-all">
+                        R$55,00
                       </span>
                     </div>
-                    <div className="mt-6">
-                      <span className="inline-block text-[8.5px] font-mono tracking-[0.18em] font-bold bg-emerald-500/[0.06] text-emerald-400/90 px-3 py-1.5 rounded-full border border-emerald-500/20 uppercase shadow-[0_4px_16px_rgba(16,185,129,0.05)]">
+                    <div className="mt-4 md:mt-6">
+                      <span className="inline-block text-[8px] sm:text-[8.5px] font-mono tracking-[0.18em] font-bold bg-emerald-500/[0.06] text-emerald-400/90 px-3 py-1.5 rounded-full border border-emerald-500/20 uppercase shadow-[0_4px_16px_rgba(16,185,129,0.05)]">
                         Valor de Lançamento
                       </span>
                     </div>
                   </div>
 
-                  <span className="text-[10px] text-amber-500 font-mono block pt-1 font-semibold">
+                  <span className="text-[9px] sm:text-[10px] text-amber-500 font-mono block pt-0.5 font-semibold">
                     🚚 + Frete conforme CEP
                   </span>
                 </div>
@@ -186,7 +186,7 @@ export default function CheckoutSection() {
                       Meditação de Reconfiguração Noturna
                     </h4>
                   </div>
-                  <p className="text-[11px] text-stone-300 font-light leading-relaxed">
+                  <p className="text-[11px] text-stone-300 font-light leading-relaxed text-left">
                     Libere o que o dia acumulou no seu campo energético e entre em sono regenerador.
                   </p>
                   <p className="text-[10px] text-stone-500 font-mono tracking-wide">
@@ -224,6 +224,22 @@ export default function CheckoutSection() {
                   </div>
                 )}
               </div>
+
+              {/* BH Pickup Promo Info */}
+              <div className="mt-6 p-4 rounded-xl border border-gold-400/20 bg-gold-400/[0.02] text-left space-y-3">
+                <h5 className="text-xs font-semibold text-gold-400 font-sans flex items-center gap-2">
+                  <MapPin size={14} className="text-gold-400" /> Mora em Belo Horizonte?
+                </h5>
+                <p className="text-[11px] sm:text-xs text-stone-300 font-light leading-normal sm:leading-relaxed">
+                  Ao adquirir seu exemplar no valor especial de pré-lançamento, você pode optar por retirá-lo no evento oficial de lançamento, recebendo seu livro autografado e sem custo de frete.
+                </p>
+                <p className="text-[11px] sm:text-xs text-stone-300 font-light leading-normal sm:leading-relaxed">
+                  Após a compra, você receberá pelo WhatsApp todas as informações sobre a data, o horário e o local do lançamento.
+                </p>
+                <p className="text-[11px] sm:text-xs text-gold-400/90 font-medium leading-normal sm:leading-relaxed italic">
+                  Além de economizar no frete, será uma alegria compartilhar esse momento especial com você!
+                </p>
+              </div>
             </div>
           </div>
 
@@ -244,7 +260,7 @@ export default function CheckoutSection() {
                       <h3 className="font-display text-sm text-stone-200 font-medium">{activeTier.title}</h3>
                       <div className="text-right shrink-0">
                         <span className="font-sans text-xs text-stone-300 block whitespace-nowrap">R${activeTier.price}</span>
-                        <span className="text-[9px] text-emerald-400 font-sans block mt-0.5 whitespace-nowrap">Economia de R$9,00</span>
+                        <span className="text-[9px] text-emerald-400 font-sans block mt-0.5 whitespace-nowrap">Economia de R$7,00</span>
                       </div>
                     </div>
                     {shippingCost !== null && (
@@ -256,7 +272,7 @@ export default function CheckoutSection() {
                     <div className="flex justify-between items-center mt-3 pt-3 border-t border-white/[0.03] gap-4">
                       <span className="text-xs text-stone-300 font-medium whitespace-nowrap">Total a pagar:</span>
                       <span className="font-sans text-lg text-gold-400 font-bold whitespace-nowrap">
-                        R${(53.0 + (shippingCost || 0)).toFixed(2).replace(".", ",")}
+                        R${(55.0 + (shippingCost || 0)).toFixed(2).replace(".", ",")}
                       </span>
                     </div>
                     {shippingCost === null && (
@@ -316,7 +332,7 @@ export default function CheckoutSection() {
                     <div className="space-y-4">
                       {paymentMethod === "pix" && (
                         <div className="p-4 rounded-xl border border-white/[0.04] bg-white/[0.01] space-y-2 text-center">
-                          <p className="text-xs text-stone-400 leading-relaxed font-light">
+                          <p className="text-xs text-stone-400 leading-relaxed font-light text-center">
                             Pague via PIX e libere seu pedido de imediato. A compensação leva no máximo 15 segundos.
                           </p>
                         </div>
@@ -403,7 +419,7 @@ export default function CheckoutSection() {
                     <p className="text-xs text-gold-300 font-mono uppercase tracking-widest">
                       Seu pedido de frequência foi assegurado.
                     </p>
-                    <p className="text-xs text-stone-400 max-w-xs mx-auto leading-relaxed">
+                    <p className="text-xs text-stone-400 max-w-xs mx-auto leading-relaxed text-center">
                       Sua compra do pacote <strong className="text-white font-normal">{activeTier.title}</strong> foi confirmada. O link para acessar o áudio da Meditação Bônus e os detalhes de postagem do seu livro físico foram enviados para o seu e-mail de registro.
                     </p>
                   </div>

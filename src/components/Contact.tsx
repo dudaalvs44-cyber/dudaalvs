@@ -28,7 +28,7 @@ export default function Contact() {
             Fale Conosco
           </h2>
           
-          <p className="font-sans text-stone-400 text-xs sm:text-sm leading-relaxed tracking-wide font-light max-w-lg mx-auto">
+          <p className="font-sans text-stone-400 text-xs sm:text-sm leading-relaxed tracking-wide font-light max-w-lg mx-auto text-center">
             Tem dúvidas sobre o livro ou deseja agendar um atendimento individual de alinhamento energético? Clique abaixo para iniciar uma conversa com presença e acolhimento.
           </p>
         </div>

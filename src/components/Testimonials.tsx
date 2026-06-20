@@ -76,13 +76,14 @@ export default function Testimonials() {
             <span className="text-[10px] sm:text-xs font-mono tracking-[0.15em] sm:tracking-[0.2em] text-gold-400 uppercase font-semibold">
               resultados reais VIDAS QUE MUDARAM
             </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-gold-400 shrink-0" />
           </div>
           
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-white leading-tight max-w-3xl mx-auto">
             Histórias de Transformações, Equilíbrio e Despertar da Consciência
           </h2>
           
-          <p className="font-sans text-stone-400 text-xs sm:text-sm leading-relaxed tracking-wider font-light max-w-lg mx-auto">
+          <p className="font-sans text-stone-400 text-xs sm:text-sm leading-relaxed tracking-wider font-light max-w-lg mx-auto text-center">
             Relatos de quem vivenciou os atendimentos e a leitura do livro.
           </p>
         </div>
@@ -112,7 +113,7 @@ export default function Testimonials() {
                 </div>
 
                 {/* Emotional Text */}
-                <p className="font-sans text-stone-200 text-sm sm:text-base md:text-lg leading-relaxed font-light tracking-wide italic max-w-2xl mx-auto whitespace-pre-line">
+                <p className="font-sans text-stone-200 text-sm sm:text-base md:text-lg leading-relaxed font-light tracking-wide italic max-w-2xl mx-auto whitespace-pre-line text-center">
                   “{activeTestimonial.text}”
                 </p>
 

@@ -89,13 +89,13 @@ export default function WhyRead() {
             O Que Cada Capítulo Vai Despertar
           </h2>
           
-          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center">
             Não se trata de uma leitura teórica e estática. Cada capítulo foi desenhado como um portal iniciático para decodificar e reconfigurar as frequências da sua mente e do seu tônus vital.
           </p>
         </div>
 
         {/* Bento/Grid style for glassmorphic cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           {benefits.map((benefit, idx) => {
             const Icon = benefit.icon;
             return (
@@ -105,24 +105,24 @@ export default function WhyRead() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.25 }}
-                className="glass-panel p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between group overflow-hidden relative"
+                className="glass-panel p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col items-center justify-start text-center group overflow-hidden relative h-full"
               >
                 {/* Dynamic glossy light reflex inside the card */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gold-400/5 rounded-full blur-2xl group-hover:bg-gold-400/10 transition-colors" />
 
-                <div className="space-y-6">
+                <div className="space-y-6 flex flex-col items-center h-full w-full">
                   {/* Icon wrapper */}
-                  <div className="relative w-12 h-12 rounded-xl flex items-center justify-center bg-gold-500/10 border border-gold-500/25 text-gold-300 group-hover:text-gold-200 group-hover:scale-110 transition-all duration-300">
+                  <div className="relative w-12 h-12 rounded-xl flex items-center justify-center bg-gold-500/10 border border-gold-500/25 text-gold-300 group-hover:text-gold-200 group-hover:scale-110 transition-all duration-300 mx-auto">
                     <Icon className="w-5 h-5" />
                     <div className="absolute inset-0 rounded-xl bg-gold-400/5 animate-pulse" />
                   </div>
 
-                  <div className="space-y-3">
+                  <div className="space-y-3 flex-1 flex flex-col justify-start items-center">
                     <h3 className="font-display text-lg text-white font-medium tracking-wide group-hover:text-gold-300 transition-colors">
                       {benefit.title}
                     </h3>
-                    <p className="text-xs text-stone-400 leading-relaxed font-light tracking-wide">
+                    <p className="text-xs text-stone-400 leading-relaxed font-light tracking-wide text-center">
                       {benefit.desc}
                     </p>
                   </div>

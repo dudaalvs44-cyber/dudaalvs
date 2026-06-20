@@ -46,7 +46,7 @@ export default function AboutBook() {
             O Que a Sua Biologia Já Sabe E a Sua Mente Ainda Não Ouviu
           </h2>
           
-          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center">
             Entender como reorganizar sua energia não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro mostra como a biologia e a neurociência explicam, em sua linguagem, o que as práticas energéticas milenares já vivenciam há séculos. Uma leitura que amplia sem fragmentar.
           </p>
         </div>
@@ -60,16 +60,16 @@ export default function AboutBook() {
               O que acontece quando a ciência e a consciência descrevem o mesmo fenômeno com palavras diferentes?
             </h3>
             
-            <p>
+            <p className="text-left md:text-justify leading-normal sm:leading-relaxed">
               A ciência já demonstrou que as emoções humanas se expressam em sinais fisiológicos mensuráveis, variações de ritmo cardíaco, tensão muscular, padrões de respiração. Estados de angústia e de escassez deixam marcas no corpo antes mesmo que a mente os reconheça.
             </p>
             
-            <p className="border-l-2 border-gold-400/30 pl-4 py-2 italic text-stone-400 bg-white/[0.01]">
+            <p className="border-l-2 border-gold-400/30 pl-4 py-2 italic text-stone-400 bg-white/[0.01] text-left md:text-justify leading-normal sm:leading-relaxed">
               Quando você reconfigura a forma como percebe e sente sua própria vida, algo no organismo começa a responder. A cura não é algo que você compra. É um estado que você aprende a sintonizar. A radiestesia terapêutica é o instrumento que torna essa sintonização possível.
               <span className="block not-italic text-xs text-gold-400/80 mt-2 font-medium">Viviane Miranda</span>
             </p>
             
-            <p>
+            <p className="text-left md:text-justify leading-normal sm:leading-relaxed">
               Em <strong className="text-white font-normal">O Código Energético da Cura</strong>, você aprenderá técnicas de autoavaliação vibracional, a utilizar instrumentos clássicos da radiestesia e a formatar meditações coerentes capazes de aumentar a ordem biológica do seu próprio organismo, o que a física chama de negentropia: o princípio vital que toda célula saudável expressa.
             </p>
           </div>
@@ -88,16 +88,16 @@ export default function AboutBook() {
                 { lvl: "Frequência Cardíaca", freq: "O Campo Magnético do Coração", text: "O coração é o maior gerador eletromagnético do corpo humano. Quando sentimentos de gratidão e amor se expandem, o campo cardíaco eleva a coerência de todo o organismo." },
                 { lvl: "Frequência Consciencial", freq: "Espírito e Matéria em Diálogo", text: "Quando a mente se aquieta e o campo energético se alinha, o organismo experimenta uma coerência profunda que a ciência e a espiritualidade descrevem com palavras diferentes para o mesmo estado. A radiestesia terapêutica é o instrumento que permite acessar e harmonizar esse estado." }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-4 items-start pb-4 border-b border-white/[0.04] last:border-0 last:pb-0">
-                  <div className="font-mono text-xs text-gold-400 bg-gold-400/10 h-7 w-7 rounded-lg flex items-center justify-center shrink-0">
+                <div key={idx} className="flex gap-3 sm:gap-4 items-start pb-4 border-b border-white/[0.04] last:border-0 last:pb-0">
+                  <div className="font-mono text-xs text-gold-400 bg-gold-400/10 h-7 w-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                     0{idx + 1}
                   </div>
-                  <div>
-                    <div className="flex justify-between items-center mb-1">
+                  <div className="flex-1">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mb-1.5">
                       <span className="text-sm font-medium text-white">{item.lvl}</span>
-                      <span className="font-mono text-[10px] text-gold-400 bg-gold-400/5 px-2 py-0.5 rounded border border-gold-400/10">{item.freq}</span>
+                      <span className="font-mono text-[9px] sm:text-[10px] text-gold-400 bg-gold-400/5 px-2 py-0.5 rounded border border-gold-400/10 self-start sm:self-auto">{item.freq}</span>
                     </div>
-                    <p className="text-xs text-stone-400 font-light">{item.text}</p>
+                    <p className="text-xs text-stone-400 font-light leading-normal sm:leading-relaxed text-left lg:text-justify">{item.text}</p>
                   </div>
                 </div>
               ))}
@@ -106,7 +106,7 @@ export default function AboutBook() {
         </div>
 
         {/* 4 Pillars Grid with elegant minimal gold ornaments */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
             return (
@@ -116,15 +116,15 @@ export default function AboutBook() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.25 }}
-                className="p-6 rounded-2xl bg-black/40 border border-white/[0.05] hover:border-gold-500/20 hover:bg-[#07060a] transition-all duration-300 flex flex-col items-start gap-4 cursor-pointer group"
+                className="p-6 rounded-2xl bg-black/40 border border-white/[0.05] hover:border-gold-500/20 hover:bg-[#07060a] transition-all duration-300 flex flex-col items-center text-center gap-4 cursor-pointer group h-full justify-start"
               >
-                <div className="p-3 rounded-xl bg-gold-400/[0.04] border border-gold-400/20 text-gold-300 group-hover:text-gold-200 group-hover:bg-gold-400/[0.08] transition-all">
+                <div className="p-3 rounded-xl bg-gold-400/[0.04] border border-gold-400/20 text-gold-300 group-hover:text-gold-200 group-hover:bg-gold-400/[0.08] transition-all flex items-center justify-center mx-auto">
                   <Icon className="w-5 h-5" />
                 </div>
-                <h4 className="font-display text-base text-stone-200 font-medium group-hover:text-gold-300 transition-colors">
+                <h4 className="font-display text-base text-stone-200 font-medium group-hover:text-gold-300 transition-colors text-center w-full">
                   {pillar.title}
                 </h4>
-                <p className="text-xs text-stone-400 leading-relaxed font-light">
+                <p className="text-xs text-stone-400 leading-relaxed font-light text-center flex-1">
                   {pillar.desc}
                 </p>
               </motion.div>

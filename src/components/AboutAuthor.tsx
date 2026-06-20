@@ -28,7 +28,7 @@ export default function AboutAuthor() {
             Sobre a Autora
           </h2>
           
-          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light">
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center">
             Conheça o percurso científico e o propósito integrativo da autora.
           </p>
         </div>
@@ -54,8 +54,8 @@ export default function AboutAuthor() {
           </div>
 
           {/* Right Column: Bio details and credentials */}
-          <div className="lg:col-span-6 space-y-8">
-            <div className="space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed tracking-normal font-light text-left">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-8">
+            <div className="space-y-2.5 sm:space-y-6 text-stone-300 text-sm sm:text-base leading-normal sm:leading-relaxed tracking-normal font-light text-left lg:text-justify">
               <p className="border-l-2 border-gold-400/40 pl-4 py-1 text-white font-normal bg-gold-400/[0.01]">
                 Viviane Marques de Miranda é bióloga, educadora e radiestesista, graduada em Ciências Biológicas pela PUC Minas, com especializações em Microbiologia, Saúde Pública e Administração dos Serviços de Saúde, Neurociência e PNL.
               </p>
@@ -70,9 +70,9 @@ export default function AboutAuthor() {
             </div>
 
             {/* Premium details highlights */}
-            <div className="border-t border-white/[0.05] pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="border-t border-white/[0.05] pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:justify-items-center">
               <div className="flex gap-3 items-center">
-                <div className="p-2 ml-1 rounded-lg bg-gold-400/5 border border-gold-400/10 text-gold-400 shrink-0">
+                <div className="p-2 rounded-lg bg-gold-400/5 border border-gold-400/10 text-gold-400 shrink-0">
                   <GraduationCap className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
@@ -82,7 +82,7 @@ export default function AboutAuthor() {
               </div>
 
               <div className="flex gap-3 items-center">
-                <div className="p-2 ml-1 rounded-lg bg-gold-400/5 border border-gold-400/10 text-gold-400 shrink-0">
+                <div className="p-2 rounded-lg bg-gold-400/5 border border-gold-400/10 text-gold-400 shrink-0">
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
@@ -92,7 +92,7 @@ export default function AboutAuthor() {
               </div>
 
               <div className="flex gap-3 items-center">
-                <div className="p-2 ml-1 rounded-lg bg-gold-400/5 border border-gold-400/10 text-gold-400 shrink-0">
+                <div className="p-2 rounded-lg bg-gold-400/5 border border-gold-400/10 text-gold-400 shrink-0">
                   <Brain className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
