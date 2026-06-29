@@ -5,40 +5,40 @@ export default function WhyRead() {
   const benefits = [
     {
       icon: Compass,
-      title: "Fundamentos reais da radiestesia",
-      desc: "A radiestesia não é prática recente nem crença sem fundamento. O livro apresenta sua história milenar e os princípios da física que explicam o funcionamento do pêndulo, da energia de forma e dos cristais como instrumentos de leitura bioenergética.",
+      title: "Fundamentos Reais\nda Radiestesia",
+      desc: "A radiestesia tem origem milenar e não é uma crença sem fundamento. O livro apresenta sua história e os princípios utilizados para interpretar o funcionamento do pêndulo, da energia de forma e dos cristais como instrumentos de leitura bioenergética.",
     },
     {
       icon: Key,
-      title: "O campo energético do seu corpo",
-      desc: "Aura, chakras e corpos sutis são apresentados sob uma perspectiva bioenergética. A tabela de Hawkins oferece um mapa de níveis de consciência que organiza essa leitura e mostra como padrões emocionais e o campo energético se relacionam dentro dessa perspectiva integrativa.",
+      title: "O Campo Energético\ndo Seu Corpo",
+      desc: "Aura, chakras e corpos sutis são apresentados sob uma perspectiva bioenergética. A Tabela de Hawkins é usada como uma ferramenta conceitual que organiza essa leitura, mostrando como padrões emocionais e o campo energético se relacionam dentro dessa perspectiva integrativa.",
     },
     {
       icon: Activity,
-      title: "Energia nos ambientes e nas relações",
-      desc: "Os espaços onde vivemos e as relações que mantemos carregam campos energéticos que afetam nosso equilíbrio. O livro mostra como essa leitura e harmonização são feitas na prática, incluindo o uso de cristais e ervas no processo de reequilíbrio.",
+      title: "Energia nos Ambientes\ne nas Relações",
+      desc: "Os espaços onde vivemos e as relações que mantemos carregam campos vibracionais que afetam nosso equilíbrio. O livro mostra como essa leitura e harmonização são propostas na prática, incluindo o uso de cristais e ervas no processo de reequilíbrio.",
     },
     {
       icon: Brain,
-      title: "Frequências sonoras e o corpo",
-      desc: "As frequências sonoras atuam diretamente sobre o organismo. O livro mostra como usá-las como ferramenta de harmonização no dia a dia.",
+      title: "Frequências Sonoras\ne o Corpo",
+      desc: "As frequências sonoras podem atuar como apoio ao organismo. O livro apresenta formas de usá-las como ferramenta de harmonização no dia a dia.",
     },
     {
       icon: Sparkles,
-      title: "Espiritualidade, consciência e materialização",
-      desc: "O livro aborda espiritualidade, consciência e materialização de objetivos sem dogmas e sem contradição com o conhecimento científico. Uma leitura que amplia a percepção sem pedir que o leitor abandone o que já sabe.",
+      title: "Espiritualidade, Consciência\ne Materialização",
+      desc: "O livro aborda espiritualidade, consciência e a materialização de objetivos sem dogmas e sem contradição com o conhecimento científico. Uma leitura que amplia a percepção sem pedir que o leitor abandone o que já sabe.",
     },
     {
       icon: Heart,
-      title: "Práticas para aplicar em casa",
-      desc: "Cada capítulo termina com técnicas de autoavaliação e reequilíbrio que o leitor pode fazer sozinho, sem atendimento presencial. Os protocolos incluem uso de pêndulo, cristais, ervas e frequências sonoras, com orientações claras sobre cada etapa.",
+      title: "Práticas para\nAplicar em Casa",
+      desc: "Cada capítulo termina com técnicas de autoavaliação e reequilíbrio que o leitor pode aplicar sozinho, sem atendimento presencial. Os protocolos incluem uso de pêndulo, cristais, ervas e frequências sonoras, com orientações claras sobre cada etapa.",
     },
   ];
 
   return (
     <section
       id="por-que-ler"
-      className="relative pt-8 pb-16 md:pt-10 md:pb-24 px-4 md:px-8 overflow-hidden bg-gradient-to-b from-[#030303]/60 to-[#0c091b]/80"
+      className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden bg-gradient-to-b from-[#030303]/60 to-[#0c091b]/80"
     >
       {/* Background glow orb */}
       <div className="absolute right-0 top-1/4 w-[35vw] h-[35vw] rounded-full bg-gold-400/[0.03] blur-[100px] pointer-events-none" />
@@ -89,46 +89,44 @@ export default function WhyRead() {
             O Que Cada Capítulo Vai Despertar
           </h2>
           
-          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center">
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center max-w-3xl mx-auto">
             Não se trata de uma leitura teórica e estática. Cada capítulo foi desenhado como um portal iniciático para decodificar e reconfigurar as frequências da sua mente e do seu tônus vital.
           </p>
         </div>
 
         {/* Bento/Grid style for glassmorphic cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-12 md:mt-16 items-stretch max-w-5xl mx-auto w-full">
           {benefits.map((benefit, idx) => {
             const Icon = benefit.icon;
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.98 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true, margin: "-50px" }}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.25 }}
-                className="glass-panel p-8 rounded-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col items-center justify-start text-center group overflow-hidden relative h-full"
+                className="glass-panel p-5 sm:p-6 md:p-8 rounded-2xl flex flex-col items-center justify-center text-center group overflow-hidden relative h-full min-h-[280px] sm:min-h-[300px] md:min-h-[320px] lg:min-h-[340px] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"
               >
                 {/* Dynamic glossy light reflex inside the card */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gold-400/5 rounded-full blur-2xl group-hover:bg-gold-400/10 transition-colors" />
 
-                <div className="space-y-6 flex flex-col items-center h-full w-full">
+                <div className="space-y-6 flex flex-col items-center text-center h-full w-full">
                   {/* Icon wrapper */}
-                  <div className="relative w-12 h-12 rounded-xl flex items-center justify-center bg-gold-500/10 border border-gold-500/25 text-gold-300 group-hover:text-gold-200 group-hover:scale-110 transition-all duration-300 mx-auto">
+                  <div className="relative w-12 h-12 rounded-xl flex items-center justify-center bg-gold-400/10 border border-gold-400/20 text-gold-300 group-hover:text-gold-200 group-hover:scale-110 transition-all duration-300 shrink-0 mx-auto">
                     <Icon className="w-5 h-5" />
                     <div className="absolute inset-0 rounded-xl bg-gold-400/5 animate-pulse" />
                   </div>
 
-                  <div className="space-y-3 flex-1 flex flex-col justify-start items-center">
-                    <h3 className="font-display text-lg text-white font-medium tracking-wide group-hover:text-gold-300 transition-colors">
+                  <div className="space-y-3 flex-1 flex flex-col justify-start items-center text-center w-full">
+                    <h3 className="font-sans text-base sm:text-lg text-white font-semibold tracking-wide group-hover:text-gold-300 transition-colors text-center w-full uppercase whitespace-pre-line">
                       {benefit.title}
                     </h3>
-                    <p className="text-xs text-stone-400 leading-relaxed font-light tracking-wide text-center">
+                    <p className="text-[13px] sm:text-sm text-stone-400/90 leading-relaxed font-light text-center flex-1">
                       {benefit.desc}
                     </p>
                   </div>
                 </div>
-
-
               </motion.div>
             );
           })}

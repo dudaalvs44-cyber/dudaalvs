@@ -70,13 +70,13 @@ export default function Testimonials() {
       <div className="max-w-4xl mx-auto relative z-10">
         
         {/* Title Block */}
-        <div className="text-center space-y-4 mb-12 md:mb-16">
-          <div className="flex items-center justify-center gap-2 md:gap-2.5 whitespace-nowrap">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-400 shrink-0" />
-            <span className="text-[10px] sm:text-xs font-mono tracking-[0.15em] sm:tracking-[0.2em] text-gold-400 uppercase font-semibold">
+        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 md:mb-16">
+          <div className="flex items-center justify-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
+            <span className="text-[10px] sm:text-xs font-mono tracking-[0.3em] text-gold-400 uppercase font-semibold">
               resultados reais VIDAS QUE MUDARAM
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-gold-400 shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
           </div>
           
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide text-white leading-tight max-w-3xl mx-auto">
@@ -121,7 +121,7 @@ export default function Testimonials() {
                 {(activeTestimonial.author || activeTestimonial.role) && (
                   <div className="pt-2 text-center">
                     {activeTestimonial.author && (
-                      <h4 className="font-display text-sm sm:text-base font-semibold tracking-wide text-white">
+                      <h4 className="font-sans text-sm sm:text-base font-semibold tracking-wide text-white">
                         {activeTestimonial.author}
                       </h4>
                     )}

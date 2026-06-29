@@ -11,12 +11,12 @@ export default function AboutBook() {
     {
       icon: Compass,
       title: "Radiestesia Vibracional",
-      desc: "A radiestesia terapêutica lê o campo energético de ambientes e pessoas. Identifica padrões de desequilíbrio energético percebidos no campo, mesmo antes de se tornarem conscientes.",
+      desc: "A radiestesia terapêutica propõe a leitura do campo energético de ambientes e pessoas, identificando padrões de desequilíbrio percebidos no campo, muitas vezes antes de se tornarem conscientes.",
     },
     {
       icon: Lightbulb,
       title: "O Poder da Mente",
-      desc: "Mente e cérebro trabalham numa sinfonia eletromagnética. Descubra como alinhar suas ondas cerebrais para despertar o equilíbrio que já existe dentro de você.",
+      desc: "Mente e cérebro trabalham em uma sinfonia eletromagnética. Descubra como alinhar suas ondas cerebrais para despertar o equilíbrio que já existe dentro de você.",
     },
     {
       icon: Orbit,
@@ -28,7 +28,7 @@ export default function AboutBook() {
   return (
     <section
       id="o-livro"
-      className="relative pt-16 pb-8 md:pt-24 md:pb-10 px-4 md:px-8 overflow-hidden bg-black/30"
+      className="relative py-16 md:py-24 px-4 md:px-8 overflow-hidden bg-black/30"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         
@@ -46,8 +46,8 @@ export default function AboutBook() {
             O Que a Sua Biologia Já Sabe E a Sua Mente Ainda Não Ouviu
           </h2>
           
-          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center">
-            Entender como reorganizar sua energia não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro mostra como a biologia e a neurociência explicam, em sua linguagem, o que as práticas energéticas milenares já vivenciam há séculos. Uma leitura que amplia sem fragmentar.
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center max-w-3xl mx-auto">
+            Entender como reorganizar sua energia não é um ato de misticismo abstrato, mas de domínio da sua natureza bioenergética. O livro mostra como a biologia e a neurociência explicam, em sua linguagem, o que práticas energéticas milenares já vivenciam há séculos. Uma leitura que amplia sem fragmentar.
           </p>
         </div>
 
@@ -56,37 +56,67 @@ export default function AboutBook() {
           
           {/* Poetic & Deep Scientific Narrative */}
           <div className="space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed tracking-wide font-light">
-            <h3 className="font-display text-xl md:text-2xl text-gold-300 font-medium">
-              O que acontece quando a ciência e a consciência descrevem o mesmo fenômeno com palavras diferentes?
+            <h3 className="font-display text-[16px] xs:text-lg sm:text-xl md:text-2xl text-gold-300 font-medium leading-snug text-balance">
+              O que acontece quando a ciência e a<br className="hidden sm:inline" />{" "}
+              consciência descrevem o mesmo fenômeno?
             </h3>
             
-            <p className="text-left md:text-justify leading-normal sm:leading-relaxed">
-              A ciência já demonstrou que as emoções humanas se expressam em sinais fisiológicos mensuráveis, variações de ritmo cardíaco, tensão muscular, padrões de respiração. Estados de angústia e de escassez deixam marcas no corpo antes mesmo que a mente os reconheça.
+            <p className="text-justified-clean leading-normal sm:leading-relaxed">
+              A ciência já demonstrou que as emoções humanas se expressam em sinais fisiológicos mensuráveis: variações de ritmo cardíaco, tension muscular e padrões de respiração. Estados de angústia e de escassez deixam marcas no corpo antes mesmo que a mente os reconheça.
             </p>
             
-            <p className="border-l-2 border-gold-400/30 pl-4 py-2 italic text-stone-400 bg-white/[0.01] text-left md:text-justify leading-normal sm:leading-relaxed">
+            <p className="text-justified-clean leading-normal sm:leading-relaxed">
               Quando você reconfigura a forma como percebe e sente sua própria vida, algo no organismo começa a responder. A cura não é algo que você compra. É um estado que você aprende a sintonizar. A radiestesia terapêutica é o instrumento que torna essa sintonização possível.
-              <span className="block not-italic text-xs text-gold-400/80 mt-2 font-medium">Viviane Miranda</span>
+              <span className="block text-xs text-gold-400/80 mt-2 font-medium">Viviane Miranda</span>
             </p>
             
-            <p className="text-left md:text-justify leading-normal sm:leading-relaxed">
+            <p className="text-justified-clean leading-normal sm:leading-relaxed">
               Em <strong className="text-white font-normal">O Código Energético da Cura</strong>, você aprenderá técnicas de autoavaliação vibracional, a utilizar instrumentos clássicos da radiestesia e a formatar meditações coerentes capazes de aumentar a ordem biológica do seu próprio organismo, o que a física chama de negentropia: o princípio vital que toda célula saudável expressa.
             </p>
           </div>
 
           {/* Interactive Aura Box / visual layout */}
-          <div className="relative p-8 rounded-3xl border border-gold-400/10 bg-gradient-to-tr from-gold-400/[0.02] via-[#0b0818]/60 to-[#120a2e]/40 overflow-hidden group">
+          <div className="relative p-6 sm:p-8 rounded-3xl border border-gold-400/10 bg-gradient-to-tr from-gold-400/[0.02] via-[#0b0818]/60 to-[#120a2e]/40 overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-violet-600/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold-400/5 rounded-full blur-3xl" />
             
-            <span className="font-mono text-[9px] tracking-widest text-gold-400/60 uppercase block mb-2">CAMPOS UNIFICADOS</span>
-            <h4 className="font-display text-lg text-white font-medium mb-4">As Três Dimensões da Cura</h4>
+            {/* Desktop Header */}
+            <div className="hidden sm:block">
+              <span className="font-mono text-[9px] tracking-widest text-gold-400/60 uppercase block mb-2 text-center">CAMPOS UNIFICADOS</span>
+              <h4 className="font-sans text-lg text-white font-semibold mb-6 text-center uppercase tracking-wide">As Três Dimensões da Cura</h4>
+            </div>
+
+            {/* Mobile Header */}
+            <div className="block sm:hidden text-center mb-3.5 -mt-4">
+              <h4 className="font-sans text-[15px] font-semibold leading-relaxed tracking-wide">
+                <span className="text-gold-400">Campos unificados</span><br />
+                <span className="text-white">às três dimensões da cura</span>
+              </h4>
+            </div>
             
             <div className="space-y-6">
               {[
-                { lvl: "Frequência Mental", freq: "Coerência dos Pensamentos", text: "Quando padrões de crença cristalizados se dissolvem, o cérebro migra dos ritmos acelerados de Beta para os estados de Alfa e Theta, o território fértil da intuição e da cura profunda." },
-                { lvl: "Frequência Cardíaca", freq: "O Campo Magnético do Coração", text: "O coração é o maior gerador eletromagnético do corpo humano. Quando sentimentos de gratidão e amor se expandem, o campo cardíaco eleva a coerência de todo o organismo." },
-                { lvl: "Frequência Consciencial", freq: "Espírito e Matéria em Diálogo", text: "Quando a mente se aquieta e o campo energético se alinha, o organismo experimenta uma coerência profunda que a ciência e a espiritualidade descrevem com palavras diferentes para o mesmo estado. A radiestesia terapêutica é o instrumento que permite acessar e harmonizar esse estado." }
+                { 
+                  lvl: "Frequência Mental", 
+                  freq: "Coerência dos Pensamentos", 
+                  text: (
+                    <>Quando padrões de crença limitantes finalmente se dissolvem,<br className="hidden sm:inline" /> o cérebro migra de ritmos acelerados para ondas de profunda calma,<br className="hidden sm:inline" /> despertando o território fértil da intuição e do equilíbrio.</>
+                  )
+                },
+                { 
+                  lvl: "Frequência Cardíaca", 
+                  freq: "O Campo Magnético do Coração", 
+                  text: (
+                    <>Quando os sentimentos mais puros de gratidão e amor se expandem,<br className="hidden sm:inline" /> o coração atua como o maior gerador de energia do corpo humano,<br className="hidden sm:inline" /> elevando o campo vibracional e a coerência de todo o organismo.</>
+                  )
+                },
+                { 
+                  lvl: "Frequência Consciencial", 
+                  freq: "Espírito e Matéria em Diálogo", 
+                  text: (
+                    <>Quando a mente se aquieta e todo o seu campo sutil se alinha,<br className="hidden sm:inline" /> o espírito e a matéria entram em um diálogo harmonioso e contínuo,<br className="hidden sm:inline" /> permitindo que a radiestesia reconecte você com a cura integrativa.</>
+                  )
+                }
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-3 sm:gap-4 items-start pb-4 border-b border-white/[0.04] last:border-0 last:pb-0">
                   <div className="font-mono text-xs text-gold-400 bg-gold-400/10 h-7 w-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
@@ -97,7 +127,7 @@ export default function AboutBook() {
                       <span className="text-sm font-medium text-white">{item.lvl}</span>
                       <span className="font-mono text-[9px] sm:text-[10px] text-gold-400 bg-gold-400/5 px-2 py-0.5 rounded border border-gold-400/10 self-start sm:self-auto">{item.freq}</span>
                     </div>
-                    <p className="text-xs text-stone-400 font-light leading-normal sm:leading-relaxed text-left lg:text-justify">{item.text}</p>
+                    <p className="text-xs text-stone-400/90 font-light leading-relaxed text-left tracking-normal">{item.text}</p>
                   </div>
                 </div>
               ))}
@@ -106,7 +136,7 @@ export default function AboutBook() {
         </div>
 
         {/* 4 Pillars Grid with elegant minimal gold ornaments */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-12 md:mt-16 items-stretch max-w-5xl mx-auto w-full">
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
             return (
@@ -116,17 +146,28 @@ export default function AboutBook() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.25 }}
-                className="p-6 rounded-2xl bg-black/40 border border-white/[0.05] hover:border-gold-500/20 hover:bg-[#07060a] transition-all duration-300 flex flex-col items-center text-center gap-4 cursor-pointer group h-full justify-start"
+                className="glass-panel p-5 sm:p-6 md:p-8 rounded-2xl flex flex-col items-center justify-center text-center group overflow-hidden relative h-full min-h-[280px] sm:min-h-[300px] md:min-h-[320px] lg:min-h-[340px] transition-all duration-300 hover:-translate-y-1.5 cursor-pointer"
               >
-                <div className="p-3 rounded-xl bg-gold-400/[0.04] border border-gold-400/20 text-gold-300 group-hover:text-gold-200 group-hover:bg-gold-400/[0.08] transition-all flex items-center justify-center mx-auto">
-                  <Icon className="w-5 h-5" />
+                {/* Dynamic glossy light reflex inside the card */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                <div className="absolute top-0 right-0 w-16 h-16 bg-gold-400/5 rounded-full blur-2xl group-hover:bg-gold-400/10 transition-colors" />
+
+                <div className="space-y-6 flex flex-col items-center text-center h-full w-full">
+                   {/* Icon wrapper */}
+                  <div className="relative w-12 h-12 rounded-xl flex items-center justify-center bg-gold-400/10 border border-gold-400/20 text-gold-300 group-hover:text-gold-200 group-hover:scale-110 transition-all duration-300 shrink-0 mx-auto">
+                    <Icon className="w-5 h-5" />
+                    <div className="absolute inset-0 rounded-xl bg-gold-400/5 animate-pulse" />
+                  </div>
+
+                  <div className="space-y-3 flex-1 flex flex-col justify-start items-center text-center w-full">
+                    <h4 className="font-sans text-base text-stone-200 font-semibold group-hover:text-gold-300 transition-colors text-center w-full uppercase tracking-wide whitespace-pre-line">
+                      {pillar.title}
+                    </h4>
+                    <p className="text-[13px] sm:text-sm text-stone-400/90 leading-relaxed font-light text-center flex-1">
+                      {pillar.desc}
+                    </p>
+                  </div>
                 </div>
-                <h4 className="font-display text-base text-stone-200 font-medium group-hover:text-gold-300 transition-colors text-center w-full">
-                  {pillar.title}
-                </h4>
-                <p className="text-xs text-stone-400 leading-relaxed font-light text-center flex-1">
-                  {pillar.desc}
-                </p>
               </motion.div>
             );
           })}

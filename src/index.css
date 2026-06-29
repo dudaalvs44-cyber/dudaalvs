@@ -41,6 +41,7 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(197, 141, 52, 0.15);
+  font-family: var(--font-sans) !important;
 }
 
 .glass-panel:hover {
@@ -108,4 +109,97 @@ body {
 /* Soft gold glow behind the book */
 .book-glow-effect {
   filter: drop-shadow(0 0 35px rgba(197, 141, 52, 0.25)) drop-shadow(0 0 70px rgba(121, 35, 196, 0.15));
+}
+
+/* Clean, professional text justification matching premium reading layout */
+.text-justified-clean {
+  text-align: justify !important;
+  text-justify: auto !important;
+  text-align-last: left !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  text-wrap: pretty !important;
+  letter-spacing: -0.01em !important;
+  word-spacing: -0.015em !important;
+}
+
+/* Card description text - left-aligned on all viewports for natural legibility without word breaks, gaps, or awkward justification spacing */
+.card-text-clean {
+  text-align: left !important;
+  text-align-last: left !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  text-wrap: pretty !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+/* Ensure premium reading text doesn't show huge spaces or break awkwardly on smaller viewports */
+@media (max-width: 640px) {
+  .text-justified-clean {
+    text-align: left !important;
+    text-align-last: left !important;
+    text-wrap: pretty !important;
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    letter-spacing: -0.005em !important;
+    word-spacing: normal !important;
+  }
+}
+
+/* Focus Mode - Target specific elements requested by the user */
+div#root:nth-of-type(1) > div:nth-of-type(1) > footer#app-footer:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1) {
+  text-wrap: balance !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#contato:nth-of-type(7) > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) {
+  text-wrap: balance !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#a-autora:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1),
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#a-autora:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2),
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#a-autora:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(3) {
+  text-align: justify !important;
+  text-justify: auto !important;
+  text-align-last: left !important;
+  text-wrap: pretty !important;
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -moz-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+@media (max-width: 640px) {
+  div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#a-autora:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1),
+  div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#a-autora:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2),
+  div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#a-autora:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(3) {
+    text-align: left !important;
+    text-justify: none !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+  }
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#a-autora:nth-of-type(5) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) > h3:nth-of-type(1) {
+  text-wrap: balance !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(1) > main:nth-of-type(1) > section#comprar:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) {
+  text-wrap: balance !important;
 }

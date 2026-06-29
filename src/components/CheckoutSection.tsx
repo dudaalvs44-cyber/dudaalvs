@@ -1,4 +1,4 @@
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { Check, ClipboardCheck, CreditCard, ShieldCheck, ShoppingBag, Truck, Zap, Sparkles, Loader2, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -6,13 +6,44 @@ export default function CheckoutSection() {
   const [paymentMethod, setPaymentMethod] = useState<string>("pix");
   const [isProcessing, setIsProcessing] = useState(false);
   const [isPaid, setIsPaid] = useState(false);
-  const [shippingZip, setShippingZip] = useState("");
-  const [shippingCalculated, setShippingCalculated] = useState(false);
-  const [shippingCost, setShippingCost] = useState<number | null>(null);
+
+  const [timeLeft, setTimeLeft] = useState({ days: 30, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const startDate = new Date(2026, 5, 25, 0, 0, 0); // 2026-06-25 00:00:00
+      const endDate = new Date(startDate.getTime() + 30 * 24 * 60 * 60 * 1000); // 30 days later: 2026-07-25 00:00:00
+
+      if (now < startDate) {
+        setTimeLeft({ days: 30, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const difference = endDate.getTime() - now.getTime();
+
+      if (difference <= 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const activeTier = {
     id: "combo",
-    title: "Edição Suprema",
+    title: "Edição de Lançamento",
     subtitle: "Livro Físico Premium",
     price: "55,00",
     desc: "Uma experiência exclusiva para quem deseja ir mais fundo nos ensinamentos de O Código Energético da Cura.",
@@ -33,22 +64,6 @@ export default function CheckoutSection() {
       setIsProcessing(false);
       setIsPaid(true);
     }, 2500);
-  };
-
-  const handleCalculateShipping = (e: FormEvent) => {
-    e.preventDefault();
-    const cleanZip = shippingZip.replace(/\D/g, "");
-    if (cleanZip.length < 8) {
-      alert("Por favor, preencha um CEP válido com 8 dígitos.");
-      return;
-    }
-    
-    // Simulate smart dynamic shipping cost based on zip code prefix
-    const prefix = parseInt(cleanZip.substring(0, 3)) || 100;
-    const calculatedFee = prefix < 300 ? 18.90 : prefix < 600 ? 24.55 : 29.80;
-    
-    setShippingCost(calculatedFee);
-    setShippingCalculated(true);
   };
 
   return (
@@ -75,7 +90,7 @@ export default function CheckoutSection() {
             Adquira o Livro Oficial
           </h2>
           
-          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center">
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center max-w-3xl mx-auto">
             Seu pedido é realizado com total segurança. Em poucos dias, o livro chega até você junto com o bônus exclusivo.
           </p>
         </div>
@@ -111,7 +126,7 @@ export default function CheckoutSection() {
                     <span className="text-[10px] sm:text-xs font-mono text-gold-400/95 tracking-[0.15em] uppercase block font-semibold">
                       {activeTier.subtitle}
                     </span>
-                    <p className="text-xs sm:text-sm text-stone-300 font-light leading-normal sm:leading-relaxed pt-0.5 text-left">
+                    <p className="text-xs sm:text-sm text-stone-300 font-light leading-normal sm:leading-relaxed pt-0.5 text-left tracking-normal">
                       {activeTier.desc}
                     </p>
                   </div>
@@ -139,16 +154,34 @@ export default function CheckoutSection() {
                         R$55,00
                       </span>
                     </div>
-                    <div className="mt-4 md:mt-6">
-                      <span className="inline-block text-[8px] sm:text-[8.5px] font-mono tracking-[0.18em] font-bold bg-emerald-500/[0.06] text-emerald-400/90 px-3 py-1.5 rounded-full border border-emerald-500/20 uppercase shadow-[0_4px_16px_rgba(16,185,129,0.05)]">
-                        Valor de Lançamento
-                      </span>
-                    </div>
                   </div>
 
-                  <span className="text-[9px] sm:text-[10px] text-amber-500 font-mono block pt-0.5 font-semibold">
-                    🚚 + Frete conforme CEP
-                  </span>
+                  <div className="pt-3 border-t border-white/[0.05] mt-2 space-y-1.5 text-left md:text-right">
+                    <span className="text-[9px] text-stone-400 font-mono block uppercase tracking-wider">
+                      Oferta de Lançamento encerra em:
+                    </span>
+                    <div className="flex items-center gap-1 font-mono text-stone-200 md:justify-end">
+                      <div className="flex flex-col items-center bg-white/[0.03] border border-white/[0.05] rounded px-1.5 py-0.5 min-w-[26px]">
+                        <span className="text-xs font-bold text-gold-400">{String(timeLeft.days).padStart(2, '0')}</span>
+                        <span className="text-[7px] text-stone-500 uppercase tracking-widest leading-none mt-0.5">d</span>
+                      </div>
+                      <span className="text-stone-600 animate-pulse text-[10px]">:</span>
+                      <div className="flex flex-col items-center bg-white/[0.03] border border-white/[0.05] rounded px-1.5 py-0.5 min-w-[26px]">
+                        <span className="text-xs font-bold text-gold-400">{String(timeLeft.hours).padStart(2, '0')}</span>
+                        <span className="text-[7px] text-stone-500 uppercase tracking-widest leading-none mt-0.5">h</span>
+                      </div>
+                      <span className="text-stone-600 animate-pulse text-[10px]">:</span>
+                      <div className="flex flex-col items-center bg-white/[0.03] border border-white/[0.05] rounded px-1.5 py-0.5 min-w-[26px]">
+                        <span className="text-xs font-bold text-gold-400">{String(timeLeft.minutes).padStart(2, '0')}</span>
+                        <span className="text-[7px] text-stone-500 uppercase tracking-widest leading-none mt-0.5">m</span>
+                      </div>
+                      <span className="text-stone-600 animate-pulse text-[10px]">:</span>
+                      <div className="flex flex-col items-center bg-white/[0.03] border border-white/[0.05] rounded px-1.5 py-0.5 min-w-[26px]">
+                        <span className="text-xs font-bold text-gold-400">{String(timeLeft.seconds).padStart(2, '0')}</span>
+                        <span className="text-[7px] text-stone-500 uppercase tracking-widest leading-none mt-0.5">s</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -156,7 +189,7 @@ export default function CheckoutSection() {
             {/* List of features for the product */}
             <div className="p-4 sm:p-6 md:p-8 rounded-2xl bg-zinc-950/60 border border-white/[0.04]">
               <h3 className="text-sm font-mono tracking-widest font-bold text-gold-400 uppercase mb-5">
-                Benefícios da Edição Suprema
+                Benefícios Da Edição De Lançamento
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -186,7 +219,7 @@ export default function CheckoutSection() {
                       Meditação de Reconfiguração Noturna
                     </h4>
                   </div>
-                  <p className="text-[11px] text-stone-300 font-light leading-relaxed text-left">
+                  <p className="text-[11px] text-stone-300 font-light leading-relaxed card-text-clean">
                     Libere o que o dia acumulou no seu campo energético e entre em sono regenerador.
                   </p>
                   <p className="text-[10px] text-stone-500 font-mono tracking-wide">
@@ -195,50 +228,22 @@ export default function CheckoutSection() {
                 </div>
               </div>
 
-              {/* Secure Shipping Calculator for physical tier */}
+              {/* BH Pickup Promo Info - Elegant and Compact replacement of the shipping calculator */}
               <div className="mt-8 pt-6 border-t border-white/[0.04]">
-                <h4 className="text-[10px] font-mono tracking-widest font-semibold text-[#a8a29e] uppercase mb-3 flex items-center gap-1.5">
-                  <Truck size={12} className="text-gold-400" /> Calcular Frete
-                </h4>
-                
-                <form onSubmit={handleCalculateShipping} className="flex gap-3 max-w-sm">
-                  <input
-                    type="text"
-                    placeholder="Ex: 01001-001"
-                    value={shippingZip}
-                    onChange={(e) => setShippingZip(e.target.value.replace(/\D/g, ""))}
-                    maxLength={8}
-                    className="bg-black border border-white/10 rounded-lg px-3 py-2 text-xs focus:outline-none focus:border-gold-400 text-stone-200 w-full"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-white text-black px-4 py-2 rounded-lg text-xs font-mono uppercase tracking-wider font-semibold hover:bg-stone-100 transition-colors shrink-0"
-                  >
-                    Calcular
-                  </button>
-                </form>
-
-                {shippingCalculated && shippingCost !== null && (
-                  <div className="mt-3 text-xs text-emerald-400 font-mono flex items-center gap-1.5 animate-pulse">
-                    <ClipboardCheck size={13} /> Envio via Transportadora Expressa: R$ {shippingCost.toFixed(2).replace(".", ",")} - Entrega de 5 a 8 dias úteis.
-                  </div>
-                )}
-              </div>
-
-              {/* BH Pickup Promo Info */}
-              <div className="mt-6 p-4 rounded-xl border border-gold-400/20 bg-gold-400/[0.02] text-left space-y-3">
-                <h5 className="text-xs font-semibold text-gold-400 font-sans flex items-center gap-2">
-                  <MapPin size={14} className="text-gold-400" /> Mora em Belo Horizonte?
-                </h5>
-                <p className="text-[11px] sm:text-xs text-stone-300 font-light leading-normal sm:leading-relaxed">
-                  Ao adquirir seu exemplar no valor especial de pré-lançamento, você pode optar por retirá-lo no evento oficial de lançamento, recebendo seu livro autografado e sem custo de frete.
-                </p>
-                <p className="text-[11px] sm:text-xs text-stone-300 font-light leading-normal sm:leading-relaxed">
-                  Após a compra, você receberá pelo WhatsApp todas as informações sobre a data, o horário e o local do lançamento.
-                </p>
-                <p className="text-[11px] sm:text-xs text-gold-400/90 font-medium leading-normal sm:leading-relaxed italic">
-                  Além de economizar no frete, será uma alegria compartilhar esse momento especial com você!
-                </p>
+                <div className="p-4 sm:p-5 rounded-xl border border-gold-400/20 bg-gold-400/[0.02] text-left space-y-3">
+                  <h5 className="text-xs sm:text-sm font-semibold text-gold-400 font-sans flex items-center gap-2">
+                    <MapPin size={14} className="text-gold-400" /> Mora em Belo Horizonte?
+                  </h5>
+                  <p className="text-[11.5px] sm:text-xs text-stone-300 font-light leading-normal sm:leading-relaxed card-text-clean">
+                    Ao adquirir seu exemplar no valor especial de pré-lançamento, você pode optar por retirá-lo no evento oficial de lançamento, recebendo seu livro autografado e sem custo de frete.
+                  </p>
+                  <p className="text-[11.5px] sm:text-xs text-stone-300 font-light leading-normal sm:leading-relaxed card-text-clean">
+                    Após a compra, você receberá pelo WhatsApp todas as informações sobre a data, o horário e o local do lançamento.
+                  </p>
+                  <p className="text-[11.5px] sm:text-xs text-gold-400/90 font-medium leading-normal sm:leading-relaxed italic card-text-clean">
+                    Além de economizar no frete, será uma alegria compartilhar esse momento especial com você!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -257,29 +262,21 @@ export default function CheckoutSection() {
                   <div className="border-b border-white/[0.05] pb-4 space-y-2">
                     <span className="text-[10px] font-mono tracking-widest text-[#a8a29e] uppercase block">Resumo do Pedido</span>
                     <div className="flex justify-between items-start gap-4">
-                      <h3 className="font-display text-sm text-stone-200 font-medium">{activeTier.title}</h3>
+                      <h3 className="font-sans text-sm text-stone-200 font-semibold">{activeTier.title}</h3>
                       <div className="text-right shrink-0">
                         <span className="font-sans text-xs text-stone-300 block whitespace-nowrap">R${activeTier.price}</span>
                         <span className="text-[9px] text-emerald-400 font-sans block mt-0.5 whitespace-nowrap">Economia de R$7,00</span>
                       </div>
                     </div>
-                    {shippingCost !== null && (
-                      <div className="flex justify-between items-center text-xs text-stone-400 gap-4">
-                        <span className="whitespace-nowrap">Frete Correios/Transportadora:</span>
-                        <span className="font-sans text-stone-300 whitespace-nowrap">R${shippingCost.toFixed(2).replace(".", ",")}</span>
-                      </div>
-                    )}
+                    
+
+
                     <div className="flex justify-between items-center mt-3 pt-3 border-t border-white/[0.03] gap-4">
                       <span className="text-xs text-stone-300 font-medium whitespace-nowrap">Total a pagar:</span>
                       <span className="font-sans text-lg text-gold-400 font-bold whitespace-nowrap">
-                        R${(55.0 + (shippingCost || 0)).toFixed(2).replace(".", ",")}
+                        R$55,00
                       </span>
                     </div>
-                    {shippingCost === null && (
-                      <p className="text-[9px] min-[360px]:text-[10px] text-amber-500 font-mono text-center animate-pulse whitespace-nowrap mt-3 mb-1">
-                        ⚠️ Insira seu CEP acima para somar o frete ao total
-                      </p>
-                    )}
                   </div>
 
                   {/* Elegant Payment Mini Cards */}
@@ -369,16 +366,13 @@ export default function CheckoutSection() {
                           />
                         </div>
                       )}
+                    </div>
 
-                      <div className="space-y-3">
-                        <label className="text-[10px] font-mono uppercase tracking-widest text-stone-400">E-mail para envio do bônus e rastreamento</label>
-                        <input
-                          type="email"
-                          required
-                          placeholder="Ex: seu-email@exemplo.com"
-                          className="w-full bg-black border border-white/10 rounded-xl px-4 py-3 text-xs text-stone-300 focus:outline-none focus:border-gold-400"
-                        />
-                      </div>
+                    <div className="py-2.5 px-3.5 rounded-xl border border-amber-500/15 bg-amber-500/[0.02] flex items-center gap-2.5 text-left text-stone-350">
+                      <span className="h-1.5 w-1.5 rounded-full bg-amber-500 shrink-0" />
+                      <p className="text-[11px] leading-normal font-light text-stone-300">
+                        Após o lançamento oficial, o valor retorna para <span className="font-semibold text-gold-400">R$ 62,00</span>.
+                      </p>
                     </div>
 
                     <button

@@ -19,8 +19,8 @@ export default function AboutAuthor() {
           <div className="flex items-center justify-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
             <span className="text-[10px] sm:text-xs font-mono tracking-[0.3em] text-gold-400 uppercase font-semibold">
-              Trajetória profissional
-            </span>
+               Trajetória profissional
+             </span>
             <span className="w-1.5 h-1.5 rounded-full bg-gold-400" />
           </div>
           
@@ -28,8 +28,8 @@ export default function AboutAuthor() {
             Sobre a Autora
           </h2>
           
-          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center">
-            Conheça o percurso científico e o propósito integrativo da autora.
+          <p className="font-sans text-stone-400 text-sm sm:text-base leading-relaxed tracking-wider font-light text-center max-w-lg mx-auto">
+            Conheça o percurso científico e o<br />propósito integrativo da autora.
           </p>
         </div>
 
@@ -55,16 +55,16 @@ export default function AboutAuthor() {
 
           {/* Right Column: Bio details and credentials */}
           <div className="lg:col-span-6 space-y-5 sm:space-y-8">
-            <div className="space-y-2.5 sm:space-y-6 text-stone-300 text-sm sm:text-base leading-normal sm:leading-relaxed tracking-normal font-light text-left lg:text-justify">
-              <p className="border-l-2 border-gold-400/40 pl-4 py-1 text-white font-normal bg-gold-400/[0.01]">
+            <div className="space-y-2.5 sm:space-y-6 text-stone-300 text-sm sm:text-base leading-normal sm:leading-relaxed tracking-normal font-light text-left">
+              <p className="text-white font-normal text-left sm:text-justified-clean">
                 Viviane Marques de Miranda é bióloga, educadora e radiestesista, graduada em Ciências Biológicas pela PUC Minas, com especializações em Microbiologia, Saúde Pública e Administração dos Serviços de Saúde, Neurociência e PNL.
               </p>
               
-              <p>
+              <p className="text-left sm:text-justified-clean">
                 Com mais de 32 anos de experiência na docência, dedica-se ao estudo das relações entre biologia, mente e energia.
               </p>
               
-              <p>
+              <p className="text-left sm:text-justified-clean">
                 Neste livro, ela integra ciência e práticas energéticas em uma abordagem que amplia a percepção sobre mente, corpo e consciência.
               </p>
             </div>
