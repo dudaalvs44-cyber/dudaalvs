@@ -44,6 +44,9 @@ export default function Footer() {
             <span className="block text-[10px] font-mono">
               © {currentYear} Viviane Marques de Miranda. Todos os direitos reservados.
             </span>
+            <span className="block text-[9.5px] font-mono text-stone-600 tracking-wider">
+              ISBN 978-65-02-07234-9
+            </span>
           </div>
 
           {/* Luxury Legal terms buttons */}

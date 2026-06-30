@@ -5,7 +5,7 @@ export default function AboutBook() {
   const pillars = [
     {
       icon: Atom,
-      title: "Física Quântica",
+      title: "Neurociência e Percepção",
       desc: "A neurociência já demonstrou que a forma como percebemos e interpretamos a realidade influencia diretamente nossas respostas biológicas. Emoções, intenções e crenças deixam marcas mensuráveis no organismo, e o livro mostra como trabalhar com isso conscientemente.",
     },
     {
@@ -62,7 +62,7 @@ export default function AboutBook() {
             </h3>
             
             <p className="text-justified-clean leading-normal sm:leading-relaxed">
-              A ciência já demonstrou que as emoções humanas se expressam em sinais fisiológicos mensuráveis: variações de ritmo cardíaco, tension muscular e padrões de respiração. Estados de angústia e de escassez deixam marcas no corpo antes mesmo que a mente os reconheça.
+              A ciência já demonstrou que as emoções humanas se expressam em sinais fisiológicos mensuráveis: variações de ritmo cardíaco, tensão muscular e padrões de respiração. Estados de angústia e de escassez deixam marcas no corpo antes mesmo que a mente os reconheça.
             </p>
             
             <p className="text-justified-clean leading-normal sm:leading-relaxed">
@@ -76,21 +76,23 @@ export default function AboutBook() {
           </div>
 
           {/* Interactive Aura Box / visual layout */}
-          <div className="relative p-6 sm:p-8 rounded-3xl border border-gold-400/10 bg-gradient-to-tr from-gold-400/[0.02] via-[#0b0818]/60 to-[#120a2e]/40 overflow-hidden group">
+          <div className="relative py-10 px-7 sm:p-8 rounded-3xl border border-gold-400/10 bg-gradient-to-tr from-gold-400/[0.02] via-[#0b0818]/60 to-[#120a2e]/40 overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-violet-600/10 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-gold-400/5 rounded-full blur-3xl" />
             
             {/* Desktop Header */}
             <div className="hidden sm:block">
-              <span className="font-mono text-[9px] tracking-widest text-gold-400/60 uppercase block mb-2 text-center">CAMPOS UNIFICADOS</span>
+              <span className="font-mono text-[9px] tracking-widest text-gold-400/60 uppercase block mb-3.5 text-center">CAMPOS UNIFICADOS</span>
               <h4 className="font-sans text-lg text-white font-semibold mb-6 text-center uppercase tracking-wide">As Três Dimensões da Cura</h4>
             </div>
 
             {/* Mobile Header */}
-            <div className="block sm:hidden text-center mb-3.5 -mt-4">
-              <h4 className="font-sans text-[15px] font-semibold leading-relaxed tracking-wide">
-                <span className="text-gold-400">Campos unificados</span><br />
-                <span className="text-white">às três dimensões da cura</span>
+            <div className="block sm:hidden text-center -mt-2 mb-7">
+              <span className="font-mono text-[10px] tracking-widest text-gold-400/50 uppercase block mb-1">
+                Campos Unificados
+              </span>
+              <h4 className="font-sans text-base text-white font-semibold leading-relaxed tracking-wide uppercase">
+                As Três Dimensões da Cura
               </h4>
             </div>
             
@@ -118,7 +120,7 @@ export default function AboutBook() {
                   )
                 }
               ].map((item, idx) => (
-                <div key={idx} className="flex gap-3 sm:gap-4 items-start pb-4 border-b border-white/[0.04] last:border-0 last:pb-0">
+                <div key={idx} className="flex gap-3 sm:gap-4 items-start pb-5 sm:pb-4 border-b border-white/[0.04] last:border-0 last:pb-0">
                   <div className="font-mono text-xs text-gold-400 bg-gold-400/10 h-7 w-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                     0{idx + 1}
                   </div>

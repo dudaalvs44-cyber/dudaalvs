@@ -188,8 +188,8 @@ export default function CheckoutSection() {
 
             {/* List of features for the product */}
             <div className="p-4 sm:p-6 md:p-8 rounded-2xl bg-zinc-950/60 border border-white/[0.04]">
-              <h3 className="text-sm font-mono tracking-widest font-bold text-gold-400 uppercase mb-5">
-                Benefícios Da Edição De Lançamento
+              <h3 className="text-xs sm:text-sm font-mono tracking-wider sm:tracking-widest font-bold text-gold-400 uppercase mb-5 leading-relaxed">
+                Benefícios Da Edição <br className="sm:hidden" /> De Lançamento
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -241,7 +241,7 @@ export default function CheckoutSection() {
                     Após a compra, você receberá pelo WhatsApp todas as informações sobre a data, o horário e o local do lançamento.
                   </p>
                   <p className="text-[11.5px] sm:text-xs text-gold-400/90 font-medium leading-normal sm:leading-relaxed italic card-text-clean">
-                    Além de economizar no frete, será uma alegria compartilhar esse momento especial com você!
+                    Uma oportunidade de receber seu exemplar com dedicatória e celebrar esse momento juntos.
                   </p>
                 </div>
               </div>
